@@ -72,7 +72,7 @@
         "security": "tls",
         "tlsSettings": {
           "allowInsecure": false,
-          "serverName": "Bpb-woRKER-pAnel-aS9.PAGEs.deV",
+          "serverName": "bpb-WOrkeR-paNEL-aS9.PAgEs.DeV",
           "alpn": [
             "h2",
             "http/1.1"
@@ -83,7 +83,7 @@
         "wsSettings": {
           "path": "/3KILQLZcyiJg6Ee2?ed=2560",
           "headers": {
-            "Host": "Bpb-woRKER-pAnel-aS9.PAGEs.deV"
+            "Host": "bpb-WOrkeR-paNEL-aS9.PAgEs.DeV"
           }
         },
         "sockopt": {
@@ -95,8 +95,8 @@
       },
       "mux": {
         "enabled": true,
-        "concurrency": 8,
-        "xudpConcurrency": 8,
+        "concurrency": -1,
+        "xudpConcurrency": -1,
         "xudpProxyUDP443": "reject"
       }
     },
