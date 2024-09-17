@@ -1,0 +1,144 @@
+{
+    "remarks": " M2rayNG Pro| Super Config 🏆",
+    "dns": {
+        "hosts": {
+            "domain:googleapis.cn": "googleapis.com"
+        },
+        "servers": [
+            "1.1.1.2"
+        ]
+    },
+    "inbounds": [
+        {
+            "port": 10808,
+            "protocol": "socks",
+            "settings": {
+                "auth": "noauth",
+                "udp": true,
+                "userLevel": 8
+            },
+            "sniffing": {
+                "destOverride": [
+                    "http",
+                    "tls",
+                    "fakedns"
+                ],
+                "enabled": true
+            },
+            "tag": "socks"
+        },
+        {
+            "port": 10809,
+            "protocol": "http",
+            "settings": {
+                "userLevel": 8
+            },
+            "tag": "http"
+        }
+    ],
+    "log": {
+        "loglevel": "warning"
+    },
+    "outbounds": [
+        {"mux": {"concurrency": -1,"enabled": false,"xudpConcurrency": 8,"xudpProxyUDP443": ""},"protocol": "vless","settings": {"vnext": [{"address": "www.speedtest.net","port": 8443,"users": [{"encryption": "none","flow": "","id": "253e78fc-d3eb-454c-89e5-3268f76c6276","level": 8,"security": "auto"}]}]},"streamSettings": {"grpcSettings": {"multiMode": false,"serviceName": "@Everyday_VPN,@Everyday_VPN,@Everyday_VPN,@Everyday_VPN,@Everyday_VPN,@Everyday_VPN,@Everyday_VPN,@Everyday_VPN,@Everyday_VPN,@Everyday_VPN,@Everyday_VPN,@Everyday_VPN,@Everyday_VPN,@Everyday_VPN,@Everyday_VPN,@Everyday_VPN,@Everyday_VPN,@Everyday_VPN,@Everyday_VPN,@Everyday_VPN"},"network": "grpc","security": "tls","tlsSettings": {"allowInsecure": false,"alpn": ["h3","h2","http/1.1"],"fingerprint": "chrome","publicKey": "","serverName": "Everyday-VPN.ev02-02-q2wx8ryz0vic3bfmd1sng7pjjn6lqk4p.tech","shortId": "","show": false,"spiderX": ""}},"proxySettings": {"tag": "fragment","transportLayer": true},"tag": "proxy_fragment_mahsa"},
+
+        {"mux": {"concurrency": -1,"enabled": false,"xudpConcurrency": 8,"xudpProxyUDP443": ""},"protocol": "vless","settings": {"vnext": [{"address": "www.speedtest.net","port": 8443,"users": [{"encryption": "none","flow": "","id": "253e78fc-d3eb-454c-89e5-3268f76c6276","level": 8,"security": "auto"}]}]},"streamSettings": {"grpcSettings": {"multiMode": false,"serviceName": "@Everyday_VPN,@Everyday_VPN,@Everyday_VPN,@Everyday_VPN,@Everyday_VPN,@Everyday_VPN,@Everyday_VPN,@Everyday_VPN,@Everyday_VPN,@Everyday_VPN,@Everyday_VPN,@Everyday_VPN,@Everyday_VPN,@Everyday_VPN,@Everyday_VPN,@Everyday_VPN,@Everyday_VPN,@Everyday_VPN,@Everyday_VPN,@Everyday_VPN"},"network": "grpc","security": "tls","tlsSettings": {"allowInsecure": false,"alpn": ["h3","h2","http/1.1"],"fingerprint": "chrome","publicKey": "","serverName": "01.ev02-02-q2wx8ryz0vic3bfmd1sng7pjjn6lqk4p.tech","shortId": "","show": false,"spiderX": ""}},"proxySettings": {"tag": "fragment","transportLayer": true},"tag": "proxy_01_fragment"},
+        {"mux": {"concurrency": -1,"enabled": false,"xudpConcurrency": 8,"xudpProxyUDP443": ""},"protocol": "vless","settings": {"vnext": [{"address": "www.speedtest.net","port": 8443,"users": [{"encryption": "none","flow": "","id": "253e78fc-d3eb-454c-89e5-3268f76c6276","level": 8,"security": "auto"}]}]},"streamSettings": {"grpcSettings": {"multiMode": false,"serviceName": "@Everyday_VPN,@Everyday_VPN,@Everyday_VPN,@Everyday_VPN,@Everyday_VPN,@Everyday_VPN,@Everyday_VPN,@Everyday_VPN,@Everyday_VPN,@Everyday_VPN,@Everyday_VPN,@Everyday_VPN,@Everyday_VPN,@Everyday_VPN,@Everyday_VPN,@Everyday_VPN,@Everyday_VPN,@Everyday_VPN,@Everyday_VPN,@Everyday_VPN"},"network": "grpc","security": "tls","tlsSettings": {"allowInsecure": false,"alpn": ["h3","h2","http/1.1"],"fingerprint": "chrome","publicKey": "","serverName": "02.ev02-02-q2wx8ryz0vic3bfmd1sng7pjjn6lqk4p.tech","shortId": "","show": false,"spiderX": ""}},"proxySettings": {"tag": "fragment","transportLayer": true},"tag": "proxy_02_fragment"},
+        
+        {"mux": {"concurrency": -1,"enabled": false,"xudpConcurrency": 8,"xudpProxyUDP443": ""},"protocol": "vless","settings": {"vnext": [{"address": "2a01:4f8:1c1b:7df::1","port": 443,"users": [{"encryption": "none","flow": "","id": "2cc2c64a-f1ff-44d4-ac05-4037adc9a3e2","level": 8,"security": "auto"}]}]},"streamSettings": {"grpcSettings": {"authority": "","multiMode": false,"serviceName": "@Everyday_VPN,@Everyday_VPN,@Everyday_VPN,@Everyday_VPN,@Everyday_VPN,@Everyday_VPN,@Everyday_VPN,@Everyday_VPN,@Everyday_VPN,@Everyday_VPN,@Everyday_VPN,@Everyday_VPN,@Everyday_VPN,@Everyday_VPN,@Everyday_VPN,@Everyday_VPN,@Everyday_VPN,@Everyday_VPN,@Everyday_VPN,@Everyday_VPN"},"network": "grpc","realitySettings": {"allowInsecure": false,"fingerprint": "chrome","publicKey": "AVesZ9rUbwnESVl0YSPs98oWmZbXlhDVjR4ssJAw6yw","serverName": "gsmarena.com","shortId": "32d7a82d","show": false,"spiderX": "/"},"security": "reality"},"tag": "proxy_01_ipv6_reality"},
+        {"mux": {"concurrency": -1,"enabled": false,"xudpConcurrency": 8,"xudpProxyUDP443": ""},"protocol": "vless","settings": {"vnext": [{"address": "2a01:4f8:1c1b:1891::1","port": 443,"users": [{"encryption": "none","flow": "","id": "2cc2c64a-f1ff-44d4-ac05-4037adc9a3e2","level": 8,"security": "auto"}]}]},"streamSettings": {"grpcSettings": {"authority": "","multiMode": false,"serviceName": "@Everyday_VPN,@Everyday_VPN,@Everyday_VPN,@Everyday_VPN,@Everyday_VPN,@Everyday_VPN,@Everyday_VPN,@Everyday_VPN,@Everyday_VPN,@Everyday_VPN,@Everyday_VPN,@Everyday_VPN,@Everyday_VPN,@Everyday_VPN,@Everyday_VPN,@Everyday_VPN,@Everyday_VPN,@Everyday_VPN,@Everyday_VPN,@Everyday_VPN"},"network": "grpc","realitySettings": {"allowInsecure": false,"fingerprint": "chrome","publicKey": "AVesZ9rUbwnESVl0YSPs98oWmZbXlhDVjR4ssJAw6yw","serverName": "gsmarena.com","shortId": "32d7a82d","show": false,"spiderX": "/"},"security": "reality"},"tag": "proxy_02_ipv6_reality"},
+
+
+        {
+            "protocol": "freedom",
+            "settings": {},
+            "tag": "direct"
+        },
+        {
+            "protocol": "freedom",
+            "tag": "fragment",
+            "domainStrategy": "UseIP",
+            "sniffing": {
+                "enabled": true,
+                "destOverride": [
+                    "http",
+                    "tls"
+                ]
+            },
+            "settings": {
+                "fragment": {
+                    "packets": "tlshello",
+                    "length": "10-20",
+                    "interval": "10-20"
+                }
+            },
+            "streamSettings": {
+                "sockopt": {
+                    "tcpNoDelay": true,
+                    "domainStrategy": "UseIP"
+                }
+            }
+        },
+        {
+            "protocol": "blackhole",
+            "settings": {
+                "response": {
+                    "type": "http"
+                }
+            },
+            "tag": "block"
+        }
+    ],
+    "policy": {
+        "levels": {
+            "8": {
+                "connIdle": 300,
+                "downlinkOnly": 1,
+                "handshake": 4,
+                "uplinkOnly": 1
+            }
+        },
+        "system": {
+            "statsOutboundUplink": true,
+            "statsOutboundDownlink": true
+        }
+    },
+    "routing": {
+        "domainStrategy": "IPIfNonMatch",
+        "rules": [
+            {
+                "ip": [
+                    "1.1.1.1"
+                ],
+                "outboundTag": "direct",
+                "port": "53",
+                "type": "field"
+            },
+            {
+                "balancerTag": "all",
+                "type": "field",
+                "network": "tcp,udp"
+            }
+        ],
+        "balancers": [
+            {
+                "tag": "all",
+                "selector": [
+                    "proxy"
+                ],
+                "strategy": {
+                    "type": "leastPing"
+                }
+            }
+        ]
+    },
+    "observatory": {
+        "probeInterval": "10s",
+        "probeURL": "http:\/\/cp.cloudflare.com",
+        "subjectSelector": [
+            "proxy"
+        ],
+        "EnableConcurrency": true
+    },
+    "stats": {}
+}
