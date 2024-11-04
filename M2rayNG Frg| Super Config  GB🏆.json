@@ -1,0 +1,2163 @@
+{
+  "remarks": "M2rayNG Frg| Super Config  GB🏆",
+  "log": {
+    "loglevel": "warning"
+  },
+  "dns": {
+    "hosts": {
+      "domain:googleapis.cn": [
+        "googleapis.com"
+      ]
+    },
+    "servers": [
+      "https://1.1.1.2/dns-query",
+      {
+        "address": "8.8.8.8",
+        "domains": [
+          "full:bia-pain-bache-2r5.pages.dev",
+          "full:www.speedtest.net"
+        ]
+      },
+      {
+        "address": "8.8.8.8",
+        "domains": [
+          "geosite:category-ir",
+          "geosite:cn",
+          "geosite:category-ru"
+        ],
+        "expectIPs": [
+          "geoip:ir",
+          "geoip:cn",
+          "geoip:ru"
+        ]
+      }
+    ],
+    "tag": "dns"
+  },
+  "inbounds": [
+    {
+      "port": 10808,
+      "protocol": "socks",
+      "settings": {
+        "auth": "noauth",
+        "udp": true,
+        "userLevel": 8
+      },
+      "sniffing": {
+        "destOverride": [
+          "http",
+          "tls"
+        ],
+        "enabled": true,
+        "routeOnly": true
+      },
+      "tag": "socks-in"
+    },
+    {
+      "port": 10809,
+      "protocol": "http",
+      "settings": {
+        "auth": "noauth",
+        "udp": true,
+        "userLevel": 8
+      },
+      "sniffing": {
+        "destOverride": [
+          "http",
+          "tls"
+        ],
+        "enabled": true,
+        "routeOnly": true
+      },
+      "tag": "http-in"
+    },
+    {
+      "listen": "127.0.0.1",
+      "port": 10853,
+      "protocol": "dokodemo-door",
+      "settings": {
+        "address": "1.1.1.1",
+        "network": "tcp,udp",
+        "port": 53
+      },
+      "tag": "dns-in"
+    }
+  ],
+  "outbounds": [
+    {
+      "mux": {
+        "concurrency": 8,
+        "enabled": true,
+        "xudpConcurrency": 16,
+        "xudpProxyUDP443": "reject"
+      },
+      "protocol": "vless",
+      "settings": {
+        "vnext": [
+          {
+            "address": "uk-full.privateip.net",
+            "port": 443,
+            "users": [
+              {
+                "encryption": "none",
+                "id": "b6c96130-b47f-494a-8daa-f306a994dfc1",
+                "level": 8,
+                "security": "auto"
+              }
+            ]
+          }
+        ]
+      },
+      "streamSettings": {
+        "network": "ws",
+        "security": "tls",
+        "sockopt": {
+          "dialerProxy": "prox-1",
+          "tcpNoDelay": true
+        },
+        "tlsSettings": {
+          "allowInsecure": false,
+          "alpn": []
+        },
+        "wsSettings": {
+          "headers": {},
+          "path": "/VLESS"
+        }
+      },
+      "tag": "chain-1"
+    },
+    {
+      "protocol": "vless",
+      "settings": {
+        "vnext": [
+          {
+            "address": "bia-pain-bache-2r5.pages.dev",
+            "port": 443,
+            "users": [
+              {
+                "id": "c6d299d4-db0b-4444-8b56-b23bbdcbcd67",
+                "encryption": "none",
+                "level": 8
+              }
+            ]
+          }
+        ]
+      },
+      "streamSettings": {
+        "network": "ws",
+        "security": "tls",
+        "sockopt": {
+          "dialerProxy": "fragment"
+        },
+        "wsSettings": {
+          "headers": {
+            "Host": "bia-pain-bache-2r5.pages.dev",
+            "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/127.0.0.0 Safari/537.36"
+          },
+          "path": "/LuBboMir5i2PIkIO?ed=2560"
+        },
+        "tlsSettings": {
+          "allowInsecure": false,
+          "fingerprint": "randomized",
+          "alpn": [
+            "h2",
+            "http/1.1"
+          ],
+          "serverName": "BiA-PAiN-baChe-2R5.PaGeS.dEV"
+        }
+      },
+      "tag": "prox-1"
+    },
+    {
+      "mux": {
+        "concurrency": 8,
+        "enabled": true,
+        "xudpConcurrency": 16,
+        "xudpProxyUDP443": "reject"
+      },
+      "protocol": "vless",
+      "settings": {
+        "vnext": [
+          {
+            "address": "uk-full.privateip.net",
+            "port": 443,
+            "users": [
+              {
+                "encryption": "none",
+                "id": "b6c96130-b47f-494a-8daa-f306a994dfc1",
+                "level": 8,
+                "security": "auto"
+              }
+            ]
+          }
+        ]
+      },
+      "streamSettings": {
+        "network": "ws",
+        "security": "tls",
+        "sockopt": {
+          "dialerProxy": "prox-2",
+          "tcpNoDelay": true
+        },
+        "tlsSettings": {
+          "allowInsecure": false,
+          "alpn": []
+        },
+        "wsSettings": {
+          "headers": {},
+          "path": "/VLESS"
+        }
+      },
+      "tag": "chain-2"
+    },
+    {
+      "protocol": "vless",
+      "settings": {
+        "vnext": [
+          {
+            "address": "www.speedtest.net",
+            "port": 443,
+            "users": [
+              {
+                "id": "c6d299d4-db0b-4444-8b56-b23bbdcbcd67",
+                "encryption": "none",
+                "level": 8
+              }
+            ]
+          }
+        ]
+      },
+      "streamSettings": {
+        "network": "ws",
+        "security": "tls",
+        "sockopt": {
+          "dialerProxy": "fragment"
+        },
+        "wsSettings": {
+          "headers": {
+            "Host": "bia-pain-bache-2r5.pages.dev",
+            "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/127.0.0.0 Safari/537.36"
+          },
+          "path": "/1HvDnpcq9RZLXDpW?ed=2560"
+        },
+        "tlsSettings": {
+          "allowInsecure": false,
+          "fingerprint": "randomized",
+          "alpn": [
+            "h2",
+            "http/1.1"
+          ],
+          "serverName": "Bia-pAIn-BachE-2r5.pAgEs.DEv"
+        }
+      },
+      "tag": "prox-2"
+    },
+    {
+      "mux": {
+        "concurrency": 8,
+        "enabled": true,
+        "xudpConcurrency": 16,
+        "xudpProxyUDP443": "reject"
+      },
+      "protocol": "vless",
+      "settings": {
+        "vnext": [
+          {
+            "address": "uk-full.privateip.net",
+            "port": 443,
+            "users": [
+              {
+                "encryption": "none",
+                "id": "b6c96130-b47f-494a-8daa-f306a994dfc1",
+                "level": 8,
+                "security": "auto"
+              }
+            ]
+          }
+        ]
+      },
+      "streamSettings": {
+        "network": "ws",
+        "security": "tls",
+        "sockopt": {
+          "dialerProxy": "prox-3",
+          "tcpNoDelay": true
+        },
+        "tlsSettings": {
+          "allowInsecure": false,
+          "alpn": []
+        },
+        "wsSettings": {
+          "headers": {},
+          "path": "/VLESS"
+        }
+      },
+      "tag": "chain-3"
+    },
+    {
+      "protocol": "vless",
+      "settings": {
+        "vnext": [
+          {
+            "address": "188.114.96.3",
+            "port": 443,
+            "users": [
+              {
+                "id": "c6d299d4-db0b-4444-8b56-b23bbdcbcd67",
+                "encryption": "none",
+                "level": 8
+              }
+            ]
+          }
+        ]
+      },
+      "streamSettings": {
+        "network": "ws",
+        "security": "tls",
+        "sockopt": {
+          "dialerProxy": "fragment"
+        },
+        "wsSettings": {
+          "headers": {
+            "Host": "bia-pain-bache-2r5.pages.dev",
+            "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/127.0.0.0 Safari/537.36"
+          },
+          "path": "/a8P0Pb0Np13zQOYj?ed=2560"
+        },
+        "tlsSettings": {
+          "allowInsecure": false,
+          "fingerprint": "randomized",
+          "alpn": [
+            "h2",
+            "http/1.1"
+          ],
+          "serverName": "bIa-pAin-BaChE-2R5.pAges.Dev"
+        }
+      },
+      "tag": "prox-3"
+    },
+    {
+      "mux": {
+        "concurrency": 8,
+        "enabled": true,
+        "xudpConcurrency": 16,
+        "xudpProxyUDP443": "reject"
+      },
+      "protocol": "vless",
+      "settings": {
+        "vnext": [
+          {
+            "address": "uk-full.privateip.net",
+            "port": 443,
+            "users": [
+              {
+                "encryption": "none",
+                "id": "b6c96130-b47f-494a-8daa-f306a994dfc1",
+                "level": 8,
+                "security": "auto"
+              }
+            ]
+          }
+        ]
+      },
+      "streamSettings": {
+        "network": "ws",
+        "security": "tls",
+        "sockopt": {
+          "dialerProxy": "prox-4",
+          "tcpNoDelay": true
+        },
+        "tlsSettings": {
+          "allowInsecure": false,
+          "alpn": []
+        },
+        "wsSettings": {
+          "headers": {},
+          "path": "/VLESS"
+        }
+      },
+      "tag": "chain-4"
+    },
+    {
+      "protocol": "vless",
+      "settings": {
+        "vnext": [
+          {
+            "address": "188.114.97.3",
+            "port": 443,
+            "users": [
+              {
+                "id": "c6d299d4-db0b-4444-8b56-b23bbdcbcd67",
+                "encryption": "none",
+                "level": 8
+              }
+            ]
+          }
+        ]
+      },
+      "streamSettings": {
+        "network": "ws",
+        "security": "tls",
+        "sockopt": {
+          "dialerProxy": "fragment"
+        },
+        "wsSettings": {
+          "headers": {
+            "Host": "bia-pain-bache-2r5.pages.dev",
+            "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/127.0.0.0 Safari/537.36"
+          },
+          "path": "/DfMHYauTxaV441h3?ed=2560"
+        },
+        "tlsSettings": {
+          "allowInsecure": false,
+          "fingerprint": "randomized",
+          "alpn": [
+            "h2",
+            "http/1.1"
+          ],
+          "serverName": "bia-PAiN-bAChE-2R5.PAGEs.dEv"
+        }
+      },
+      "tag": "prox-4"
+    },
+    {
+      "mux": {
+        "concurrency": 8,
+        "enabled": true,
+        "xudpConcurrency": 16,
+        "xudpProxyUDP443": "reject"
+      },
+      "protocol": "vless",
+      "settings": {
+        "vnext": [
+          {
+            "address": "uk-full.privateip.net",
+            "port": 443,
+            "users": [
+              {
+                "encryption": "none",
+                "id": "b6c96130-b47f-494a-8daa-f306a994dfc1",
+                "level": 8,
+                "security": "auto"
+              }
+            ]
+          }
+        ]
+      },
+      "streamSettings": {
+        "network": "ws",
+        "security": "tls",
+        "sockopt": {
+          "dialerProxy": "prox-5",
+          "tcpNoDelay": true
+        },
+        "tlsSettings": {
+          "allowInsecure": false,
+          "alpn": []
+        },
+        "wsSettings": {
+          "headers": {},
+          "path": "/VLESS"
+        }
+      },
+      "tag": "chain-5"
+    },
+    {
+      "protocol": "vless",
+      "settings": {
+        "vnext": [
+          {
+            "address": "[2a06:98c1:3120::3]",
+            "port": 443,
+            "users": [
+              {
+                "id": "c6d299d4-db0b-4444-8b56-b23bbdcbcd67",
+                "encryption": "none",
+                "level": 8
+              }
+            ]
+          }
+        ]
+      },
+      "streamSettings": {
+        "network": "ws",
+        "security": "tls",
+        "sockopt": {
+          "dialerProxy": "fragment"
+        },
+        "wsSettings": {
+          "headers": {
+            "Host": "bia-pain-bache-2r5.pages.dev",
+            "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/127.0.0.0 Safari/537.36"
+          },
+          "path": "/EG2LOEqsHfPdKOLu?ed=2560"
+        },
+        "tlsSettings": {
+          "allowInsecure": false,
+          "fingerprint": "randomized",
+          "alpn": [
+            "h2",
+            "http/1.1"
+          ],
+          "serverName": "bia-PAIN-baChe-2R5.pagEs.DEv"
+        }
+      },
+      "tag": "prox-5"
+    },
+    {
+      "mux": {
+        "concurrency": 8,
+        "enabled": true,
+        "xudpConcurrency": 16,
+        "xudpProxyUDP443": "reject"
+      },
+      "protocol": "vless",
+      "settings": {
+        "vnext": [
+          {
+            "address": "uk-full.privateip.net",
+            "port": 443,
+            "users": [
+              {
+                "encryption": "none",
+                "id": "b6c96130-b47f-494a-8daa-f306a994dfc1",
+                "level": 8,
+                "security": "auto"
+              }
+            ]
+          }
+        ]
+      },
+      "streamSettings": {
+        "network": "ws",
+        "security": "tls",
+        "sockopt": {
+          "dialerProxy": "prox-6",
+          "tcpNoDelay": true
+        },
+        "tlsSettings": {
+          "allowInsecure": false,
+          "alpn": []
+        },
+        "wsSettings": {
+          "headers": {},
+          "path": "/VLESS"
+        }
+      },
+      "tag": "chain-6"
+    },
+    {
+      "protocol": "vless",
+      "settings": {
+        "vnext": [
+          {
+            "address": "[2a06:98c1:3121::3]",
+            "port": 443,
+            "users": [
+              {
+                "id": "c6d299d4-db0b-4444-8b56-b23bbdcbcd67",
+                "encryption": "none",
+                "level": 8
+              }
+            ]
+          }
+        ]
+      },
+      "streamSettings": {
+        "network": "ws",
+        "security": "tls",
+        "sockopt": {
+          "dialerProxy": "fragment"
+        },
+        "wsSettings": {
+          "headers": {
+            "Host": "bia-pain-bache-2r5.pages.dev",
+            "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/127.0.0.0 Safari/537.36"
+          },
+          "path": "/ADIxOUNDfubTjX0J?ed=2560"
+        },
+        "tlsSettings": {
+          "allowInsecure": false,
+          "fingerprint": "randomized",
+          "alpn": [
+            "h2",
+            "http/1.1"
+          ],
+          "serverName": "BIa-pain-baChE-2R5.pages.Dev"
+        }
+      },
+      "tag": "prox-6"
+    },
+    {
+      "mux": {
+        "concurrency": 8,
+        "enabled": true,
+        "xudpConcurrency": 16,
+        "xudpProxyUDP443": "reject"
+      },
+      "protocol": "vless",
+      "settings": {
+        "vnext": [
+          {
+            "address": "uk-full.privateip.net",
+            "port": 443,
+            "users": [
+              {
+                "encryption": "none",
+                "id": "b6c96130-b47f-494a-8daa-f306a994dfc1",
+                "level": 8,
+                "security": "auto"
+              }
+            ]
+          }
+        ]
+      },
+      "streamSettings": {
+        "network": "ws",
+        "security": "tls",
+        "sockopt": {
+          "dialerProxy": "prox-7",
+          "tcpNoDelay": true
+        },
+        "tlsSettings": {
+          "allowInsecure": false,
+          "alpn": []
+        },
+        "wsSettings": {
+          "headers": {},
+          "path": "/VLESS"
+        }
+      },
+      "tag": "chain-7"
+    },
+    {
+      "protocol": "vless",
+      "settings": {
+        "vnext": [
+          {
+            "address": "154.211.8.225",
+            "port": 443,
+            "users": [
+              {
+                "id": "c6d299d4-db0b-4444-8b56-b23bbdcbcd67",
+                "encryption": "none",
+                "level": 8
+              }
+            ]
+          }
+        ]
+      },
+      "streamSettings": {
+        "network": "ws",
+        "security": "tls",
+        "sockopt": {
+          "dialerProxy": "fragment"
+        },
+        "wsSettings": {
+          "headers": {
+            "Host": "bia-pain-bache-2r5.pages.dev",
+            "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/127.0.0.0 Safari/537.36"
+          },
+          "path": "/INJ438h4I93eHqbk?ed=2560"
+        },
+        "tlsSettings": {
+          "allowInsecure": false,
+          "fingerprint": "randomized",
+          "alpn": [
+            "h2",
+            "http/1.1"
+          ],
+          "serverName": "BIa-PAiN-BAchE-2R5.PaGeS.dEv"
+        }
+      },
+      "tag": "prox-7"
+    },
+    {
+      "mux": {
+        "concurrency": 8,
+        "enabled": true,
+        "xudpConcurrency": 16,
+        "xudpProxyUDP443": "reject"
+      },
+      "protocol": "vless",
+      "settings": {
+        "vnext": [
+          {
+            "address": "uk-full.privateip.net",
+            "port": 443,
+            "users": [
+              {
+                "encryption": "none",
+                "id": "b6c96130-b47f-494a-8daa-f306a994dfc1",
+                "level": 8,
+                "security": "auto"
+              }
+            ]
+          }
+        ]
+      },
+      "streamSettings": {
+        "network": "ws",
+        "security": "tls",
+        "sockopt": {
+          "dialerProxy": "prox-8",
+          "tcpNoDelay": true
+        },
+        "tlsSettings": {
+          "allowInsecure": false,
+          "alpn": []
+        },
+        "wsSettings": {
+          "headers": {},
+          "path": "/VLESS"
+        }
+      },
+      "tag": "chain-8"
+    },
+    {
+      "protocol": "vless",
+      "settings": {
+        "vnext": [
+          {
+            "address": "23.227.38.233",
+            "port": 443,
+            "users": [
+              {
+                "id": "c6d299d4-db0b-4444-8b56-b23bbdcbcd67",
+                "encryption": "none",
+                "level": 8
+              }
+            ]
+          }
+        ]
+      },
+      "streamSettings": {
+        "network": "ws",
+        "security": "tls",
+        "sockopt": {
+          "dialerProxy": "fragment"
+        },
+        "wsSettings": {
+          "headers": {
+            "Host": "bia-pain-bache-2r5.pages.dev",
+            "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/127.0.0.0 Safari/537.36"
+          },
+          "path": "/ukeVq5yxItVXGMUp?ed=2560"
+        },
+        "tlsSettings": {
+          "allowInsecure": false,
+          "fingerprint": "randomized",
+          "alpn": [
+            "h2",
+            "http/1.1"
+          ],
+          "serverName": "biA-paIN-baChE-2R5.pages.dEv"
+        }
+      },
+      "tag": "prox-8"
+    },
+    {
+      "mux": {
+        "concurrency": 8,
+        "enabled": true,
+        "xudpConcurrency": 16,
+        "xudpProxyUDP443": "reject"
+      },
+      "protocol": "vless",
+      "settings": {
+        "vnext": [
+          {
+            "address": "uk-full.privateip.net",
+            "port": 443,
+            "users": [
+              {
+                "encryption": "none",
+                "id": "b6c96130-b47f-494a-8daa-f306a994dfc1",
+                "level": 8,
+                "security": "auto"
+              }
+            ]
+          }
+        ]
+      },
+      "streamSettings": {
+        "network": "ws",
+        "security": "tls",
+        "sockopt": {
+          "dialerProxy": "prox-9",
+          "tcpNoDelay": true
+        },
+        "tlsSettings": {
+          "allowInsecure": false,
+          "alpn": []
+        },
+        "wsSettings": {
+          "headers": {},
+          "path": "/VLESS"
+        }
+      },
+      "tag": "chain-9"
+    },
+    {
+      "protocol": "vless",
+      "settings": {
+        "vnext": [
+          {
+            "address": "23.227.38.139",
+            "port": 443,
+            "users": [
+              {
+                "id": "c6d299d4-db0b-4444-8b56-b23bbdcbcd67",
+                "encryption": "none",
+                "level": 8
+              }
+            ]
+          }
+        ]
+      },
+      "streamSettings": {
+        "network": "ws",
+        "security": "tls",
+        "sockopt": {
+          "dialerProxy": "fragment"
+        },
+        "wsSettings": {
+          "headers": {
+            "Host": "bia-pain-bache-2r5.pages.dev",
+            "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/127.0.0.0 Safari/537.36"
+          },
+          "path": "/VTPAfvVFkBRJrpek?ed=2560"
+        },
+        "tlsSettings": {
+          "allowInsecure": false,
+          "fingerprint": "randomized",
+          "alpn": [
+            "h2",
+            "http/1.1"
+          ],
+          "serverName": "biA-paIn-BAcHe-2R5.PAGEs.dEV"
+        }
+      },
+      "tag": "prox-9"
+    },
+    {
+      "mux": {
+        "concurrency": 8,
+        "enabled": true,
+        "xudpConcurrency": 16,
+        "xudpProxyUDP443": "reject"
+      },
+      "protocol": "vless",
+      "settings": {
+        "vnext": [
+          {
+            "address": "uk-full.privateip.net",
+            "port": 443,
+            "users": [
+              {
+                "encryption": "none",
+                "id": "b6c96130-b47f-494a-8daa-f306a994dfc1",
+                "level": 8,
+                "security": "auto"
+              }
+            ]
+          }
+        ]
+      },
+      "streamSettings": {
+        "network": "ws",
+        "security": "tls",
+        "sockopt": {
+          "dialerProxy": "prox-10",
+          "tcpNoDelay": true
+        },
+        "tlsSettings": {
+          "allowInsecure": false,
+          "alpn": []
+        },
+        "wsSettings": {
+          "headers": {},
+          "path": "/VLESS"
+        }
+      },
+      "tag": "chain-10"
+    },
+    {
+      "protocol": "vless",
+      "settings": {
+        "vnext": [
+          {
+            "address": "23.227.38.63",
+            "port": 443,
+            "users": [
+              {
+                "id": "c6d299d4-db0b-4444-8b56-b23bbdcbcd67",
+                "encryption": "none",
+                "level": 8
+              }
+            ]
+          }
+        ]
+      },
+      "streamSettings": {
+        "network": "ws",
+        "security": "tls",
+        "sockopt": {
+          "dialerProxy": "fragment"
+        },
+        "wsSettings": {
+          "headers": {
+            "Host": "bia-pain-bache-2r5.pages.dev",
+            "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/127.0.0.0 Safari/537.36"
+          },
+          "path": "/cod1osOTN0E7yWdr?ed=2560"
+        },
+        "tlsSettings": {
+          "allowInsecure": false,
+          "fingerprint": "randomized",
+          "alpn": [
+            "h2",
+            "http/1.1"
+          ],
+          "serverName": "BIa-pAIn-BaChE-2R5.PAGES.dEv"
+        }
+      },
+      "tag": "prox-10"
+    },
+    {
+      "mux": {
+        "concurrency": 8,
+        "enabled": true,
+        "xudpConcurrency": 16,
+        "xudpProxyUDP443": "reject"
+      },
+      "protocol": "vless",
+      "settings": {
+        "vnext": [
+          {
+            "address": "uk-full.privateip.net",
+            "port": 443,
+            "users": [
+              {
+                "encryption": "none",
+                "id": "b6c96130-b47f-494a-8daa-f306a994dfc1",
+                "level": 8,
+                "security": "auto"
+              }
+            ]
+          }
+        ]
+      },
+      "streamSettings": {
+        "network": "ws",
+        "security": "tls",
+        "sockopt": {
+          "dialerProxy": "prox-11",
+          "tcpNoDelay": true
+        },
+        "tlsSettings": {
+          "allowInsecure": false,
+          "alpn": []
+        },
+        "wsSettings": {
+          "headers": {},
+          "path": "/VLESS"
+        }
+      },
+      "tag": "chain-11"
+    },
+    {
+      "protocol": "vless",
+      "settings": {
+        "vnext": [
+          {
+            "address": "23.227.38.95",
+            "port": 443,
+            "users": [
+              {
+                "id": "c6d299d4-db0b-4444-8b56-b23bbdcbcd67",
+                "encryption": "none",
+                "level": 8
+              }
+            ]
+          }
+        ]
+      },
+      "streamSettings": {
+        "network": "ws",
+        "security": "tls",
+        "sockopt": {
+          "dialerProxy": "fragment"
+        },
+        "wsSettings": {
+          "headers": {
+            "Host": "bia-pain-bache-2r5.pages.dev",
+            "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/127.0.0.0 Safari/537.36"
+          },
+          "path": "/puACvtBGwlnUDin1?ed=2560"
+        },
+        "tlsSettings": {
+          "allowInsecure": false,
+          "fingerprint": "randomized",
+          "alpn": [
+            "h2",
+            "http/1.1"
+          ],
+          "serverName": "BiA-pAIn-BacHe-2R5.PAGES.dev"
+        }
+      },
+      "tag": "prox-11"
+    },
+    {
+      "mux": {
+        "concurrency": 8,
+        "enabled": true,
+        "xudpConcurrency": 16,
+        "xudpProxyUDP443": "reject"
+      },
+      "protocol": "vless",
+      "settings": {
+        "vnext": [
+          {
+            "address": "uk-full.privateip.net",
+            "port": 443,
+            "users": [
+              {
+                "encryption": "none",
+                "id": "b6c96130-b47f-494a-8daa-f306a994dfc1",
+                "level": 8,
+                "security": "auto"
+              }
+            ]
+          }
+        ]
+      },
+      "streamSettings": {
+        "network": "ws",
+        "security": "tls",
+        "sockopt": {
+          "dialerProxy": "prox-12",
+          "tcpNoDelay": true
+        },
+        "tlsSettings": {
+          "allowInsecure": false,
+          "alpn": []
+        },
+        "wsSettings": {
+          "headers": {},
+          "path": "/VLESS"
+        }
+      },
+      "tag": "chain-12"
+    },
+    {
+      "protocol": "vless",
+      "settings": {
+        "vnext": [
+          {
+            "address": "23.227.38.205",
+            "port": 443,
+            "users": [
+              {
+                "id": "c6d299d4-db0b-4444-8b56-b23bbdcbcd67",
+                "encryption": "none",
+                "level": 8
+              }
+            ]
+          }
+        ]
+      },
+      "streamSettings": {
+        "network": "ws",
+        "security": "tls",
+        "sockopt": {
+          "dialerProxy": "fragment"
+        },
+        "wsSettings": {
+          "headers": {
+            "Host": "bia-pain-bache-2r5.pages.dev",
+            "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/127.0.0.0 Safari/537.36"
+          },
+          "path": "/FkfNRUHYQ7d9RMeG?ed=2560"
+        },
+        "tlsSettings": {
+          "allowInsecure": false,
+          "fingerprint": "randomized",
+          "alpn": [
+            "h2",
+            "http/1.1"
+          ],
+          "serverName": "bIA-paIn-bACHe-2R5.PAGES.dEV"
+        }
+      },
+      "tag": "prox-12"
+    },
+    {
+      "mux": {
+        "concurrency": 8,
+        "enabled": true,
+        "xudpConcurrency": 16,
+        "xudpProxyUDP443": "reject"
+      },
+      "protocol": "vless",
+      "settings": {
+        "vnext": [
+          {
+            "address": "uk-full.privateip.net",
+            "port": 443,
+            "users": [
+              {
+                "encryption": "none",
+                "id": "b6c96130-b47f-494a-8daa-f306a994dfc1",
+                "level": 8,
+                "security": "auto"
+              }
+            ]
+          }
+        ]
+      },
+      "streamSettings": {
+        "network": "ws",
+        "security": "tls",
+        "sockopt": {
+          "dialerProxy": "prox-13",
+          "tcpNoDelay": true
+        },
+        "tlsSettings": {
+          "allowInsecure": false,
+          "alpn": []
+        },
+        "wsSettings": {
+          "headers": {},
+          "path": "/VLESS"
+        }
+      },
+      "tag": "chain-13"
+    },
+    {
+      "protocol": "trojan",
+      "settings": {
+        "servers": [
+          {
+            "address": "bia-pain-bache-2r5.pages.dev",
+            "port": 443,
+            "password": "REvil",
+            "level": 8
+          }
+        ]
+      },
+      "streamSettings": {
+        "network": "ws",
+        "security": "tls",
+        "sockopt": {
+          "dialerProxy": "fragment"
+        },
+        "wsSettings": {
+          "headers": {
+            "Host": "bia-pain-bache-2r5.pages.dev"
+          },
+          "path": "/tryMfkXu1l8J17LBo0?ed=2560"
+        },
+        "tlsSettings": {
+          "allowInsecure": false,
+          "fingerprint": "randomized",
+          "alpn": [
+            "h2",
+            "http/1.1"
+          ],
+          "serverName": "BIA-PaiN-bACHe-2r5.pAGeS.Dev"
+        }
+      },
+      "tag": "prox-13"
+    },
+    {
+      "mux": {
+        "concurrency": 8,
+        "enabled": true,
+        "xudpConcurrency": 16,
+        "xudpProxyUDP443": "reject"
+      },
+      "protocol": "vless",
+      "settings": {
+        "vnext": [
+          {
+            "address": "uk-full.privateip.net",
+            "port": 443,
+            "users": [
+              {
+                "encryption": "none",
+                "id": "b6c96130-b47f-494a-8daa-f306a994dfc1",
+                "level": 8,
+                "security": "auto"
+              }
+            ]
+          }
+        ]
+      },
+      "streamSettings": {
+        "network": "ws",
+        "security": "tls",
+        "sockopt": {
+          "dialerProxy": "prox-14",
+          "tcpNoDelay": true
+        },
+        "tlsSettings": {
+          "allowInsecure": false,
+          "alpn": []
+        },
+        "wsSettings": {
+          "headers": {},
+          "path": "/VLESS"
+        }
+      },
+      "tag": "chain-14"
+    },
+    {
+      "protocol": "trojan",
+      "settings": {
+        "servers": [
+          {
+            "address": "www.speedtest.net",
+            "port": 443,
+            "password": "REvil",
+            "level": 8
+          }
+        ]
+      },
+      "streamSettings": {
+        "network": "ws",
+        "security": "tls",
+        "sockopt": {
+          "dialerProxy": "fragment"
+        },
+        "wsSettings": {
+          "headers": {
+            "Host": "bia-pain-bache-2r5.pages.dev"
+          },
+          "path": "/trVfeAUtTPoDPCPC3t?ed=2560"
+        },
+        "tlsSettings": {
+          "allowInsecure": false,
+          "fingerprint": "randomized",
+          "alpn": [
+            "h2",
+            "http/1.1"
+          ],
+          "serverName": "BiA-pAiN-bACHE-2R5.paGeS.dEV"
+        }
+      },
+      "tag": "prox-14"
+    },
+    {
+      "mux": {
+        "concurrency": 8,
+        "enabled": true,
+        "xudpConcurrency": 16,
+        "xudpProxyUDP443": "reject"
+      },
+      "protocol": "vless",
+      "settings": {
+        "vnext": [
+          {
+            "address": "uk-full.privateip.net",
+            "port": 443,
+            "users": [
+              {
+                "encryption": "none",
+                "id": "b6c96130-b47f-494a-8daa-f306a994dfc1",
+                "level": 8,
+                "security": "auto"
+              }
+            ]
+          }
+        ]
+      },
+      "streamSettings": {
+        "network": "ws",
+        "security": "tls",
+        "sockopt": {
+          "dialerProxy": "prox-15",
+          "tcpNoDelay": true
+        },
+        "tlsSettings": {
+          "allowInsecure": false,
+          "alpn": []
+        },
+        "wsSettings": {
+          "headers": {},
+          "path": "/VLESS"
+        }
+      },
+      "tag": "chain-15"
+    },
+    {
+      "protocol": "trojan",
+      "settings": {
+        "servers": [
+          {
+            "address": "188.114.96.3",
+            "port": 443,
+            "password": "REvil",
+            "level": 8
+          }
+        ]
+      },
+      "streamSettings": {
+        "network": "ws",
+        "security": "tls",
+        "sockopt": {
+          "dialerProxy": "fragment"
+        },
+        "wsSettings": {
+          "headers": {
+            "Host": "bia-pain-bache-2r5.pages.dev"
+          },
+          "path": "/trsfjfqwJkxOJ72QWe?ed=2560"
+        },
+        "tlsSettings": {
+          "allowInsecure": false,
+          "fingerprint": "randomized",
+          "alpn": [
+            "h2",
+            "http/1.1"
+          ],
+          "serverName": "bIA-PAIn-bachE-2R5.pagEs.DEv"
+        }
+      },
+      "tag": "prox-15"
+    },
+    {
+      "mux": {
+        "concurrency": 8,
+        "enabled": true,
+        "xudpConcurrency": 16,
+        "xudpProxyUDP443": "reject"
+      },
+      "protocol": "vless",
+      "settings": {
+        "vnext": [
+          {
+            "address": "uk-full.privateip.net",
+            "port": 443,
+            "users": [
+              {
+                "encryption": "none",
+                "id": "b6c96130-b47f-494a-8daa-f306a994dfc1",
+                "level": 8,
+                "security": "auto"
+              }
+            ]
+          }
+        ]
+      },
+      "streamSettings": {
+        "network": "ws",
+        "security": "tls",
+        "sockopt": {
+          "dialerProxy": "prox-16",
+          "tcpNoDelay": true
+        },
+        "tlsSettings": {
+          "allowInsecure": false,
+          "alpn": []
+        },
+        "wsSettings": {
+          "headers": {},
+          "path": "/VLESS"
+        }
+      },
+      "tag": "chain-16"
+    },
+    {
+      "protocol": "trojan",
+      "settings": {
+        "servers": [
+          {
+            "address": "188.114.97.3",
+            "port": 443,
+            "password": "REvil",
+            "level": 8
+          }
+        ]
+      },
+      "streamSettings": {
+        "network": "ws",
+        "security": "tls",
+        "sockopt": {
+          "dialerProxy": "fragment"
+        },
+        "wsSettings": {
+          "headers": {
+            "Host": "bia-pain-bache-2r5.pages.dev"
+          },
+          "path": "/tr6iVM9VhYtrGGuU74?ed=2560"
+        },
+        "tlsSettings": {
+          "allowInsecure": false,
+          "fingerprint": "randomized",
+          "alpn": [
+            "h2",
+            "http/1.1"
+          ],
+          "serverName": "BIA-Pain-baCHe-2R5.PagEs.dev"
+        }
+      },
+      "tag": "prox-16"
+    },
+    {
+      "mux": {
+        "concurrency": 8,
+        "enabled": true,
+        "xudpConcurrency": 16,
+        "xudpProxyUDP443": "reject"
+      },
+      "protocol": "vless",
+      "settings": {
+        "vnext": [
+          {
+            "address": "uk-full.privateip.net",
+            "port": 443,
+            "users": [
+              {
+                "encryption": "none",
+                "id": "b6c96130-b47f-494a-8daa-f306a994dfc1",
+                "level": 8,
+                "security": "auto"
+              }
+            ]
+          }
+        ]
+      },
+      "streamSettings": {
+        "network": "ws",
+        "security": "tls",
+        "sockopt": {
+          "dialerProxy": "prox-17",
+          "tcpNoDelay": true
+        },
+        "tlsSettings": {
+          "allowInsecure": false,
+          "alpn": []
+        },
+        "wsSettings": {
+          "headers": {},
+          "path": "/VLESS"
+        }
+      },
+      "tag": "chain-17"
+    },
+    {
+      "protocol": "trojan",
+      "settings": {
+        "servers": [
+          {
+            "address": "[2a06:98c1:3120::3]",
+            "port": 443,
+            "password": "REvil",
+            "level": 8
+          }
+        ]
+      },
+      "streamSettings": {
+        "network": "ws",
+        "security": "tls",
+        "sockopt": {
+          "dialerProxy": "fragment"
+        },
+        "wsSettings": {
+          "headers": {
+            "Host": "bia-pain-bache-2r5.pages.dev"
+          },
+          "path": "/trwRYsd4fqcTMlfbUt?ed=2560"
+        },
+        "tlsSettings": {
+          "allowInsecure": false,
+          "fingerprint": "randomized",
+          "alpn": [
+            "h2",
+            "http/1.1"
+          ],
+          "serverName": "biA-pAIN-baChe-2R5.PAgeS.DeV"
+        }
+      },
+      "tag": "prox-17"
+    },
+    {
+      "mux": {
+        "concurrency": 8,
+        "enabled": true,
+        "xudpConcurrency": 16,
+        "xudpProxyUDP443": "reject"
+      },
+      "protocol": "vless",
+      "settings": {
+        "vnext": [
+          {
+            "address": "uk-full.privateip.net",
+            "port": 443,
+            "users": [
+              {
+                "encryption": "none",
+                "id": "b6c96130-b47f-494a-8daa-f306a994dfc1",
+                "level": 8,
+                "security": "auto"
+              }
+            ]
+          }
+        ]
+      },
+      "streamSettings": {
+        "network": "ws",
+        "security": "tls",
+        "sockopt": {
+          "dialerProxy": "prox-18",
+          "tcpNoDelay": true
+        },
+        "tlsSettings": {
+          "allowInsecure": false,
+          "alpn": []
+        },
+        "wsSettings": {
+          "headers": {},
+          "path": "/VLESS"
+        }
+      },
+      "tag": "chain-18"
+    },
+    {
+      "protocol": "trojan",
+      "settings": {
+        "servers": [
+          {
+            "address": "[2a06:98c1:3121::3]",
+            "port": 443,
+            "password": "REvil",
+            "level": 8
+          }
+        ]
+      },
+      "streamSettings": {
+        "network": "ws",
+        "security": "tls",
+        "sockopt": {
+          "dialerProxy": "fragment"
+        },
+        "wsSettings": {
+          "headers": {
+            "Host": "bia-pain-bache-2r5.pages.dev"
+          },
+          "path": "/trISTzaUUNlm0puNOz?ed=2560"
+        },
+        "tlsSettings": {
+          "allowInsecure": false,
+          "fingerprint": "randomized",
+          "alpn": [
+            "h2",
+            "http/1.1"
+          ],
+          "serverName": "bIa-pAiN-bAche-2r5.pAgES.DEV"
+        }
+      },
+      "tag": "prox-18"
+    },
+    {
+      "mux": {
+        "concurrency": 8,
+        "enabled": true,
+        "xudpConcurrency": 16,
+        "xudpProxyUDP443": "reject"
+      },
+      "protocol": "vless",
+      "settings": {
+        "vnext": [
+          {
+            "address": "uk-full.privateip.net",
+            "port": 443,
+            "users": [
+              {
+                "encryption": "none",
+                "id": "b6c96130-b47f-494a-8daa-f306a994dfc1",
+                "level": 8,
+                "security": "auto"
+              }
+            ]
+          }
+        ]
+      },
+      "streamSettings": {
+        "network": "ws",
+        "security": "tls",
+        "sockopt": {
+          "dialerProxy": "prox-19",
+          "tcpNoDelay": true
+        },
+        "tlsSettings": {
+          "allowInsecure": false,
+          "alpn": []
+        },
+        "wsSettings": {
+          "headers": {},
+          "path": "/VLESS"
+        }
+      },
+      "tag": "chain-19"
+    },
+    {
+      "protocol": "trojan",
+      "settings": {
+        "servers": [
+          {
+            "address": "154.211.8.225",
+            "port": 443,
+            "password": "REvil",
+            "level": 8
+          }
+        ]
+      },
+      "streamSettings": {
+        "network": "ws",
+        "security": "tls",
+        "sockopt": {
+          "dialerProxy": "fragment"
+        },
+        "wsSettings": {
+          "headers": {
+            "Host": "bia-pain-bache-2r5.pages.dev"
+          },
+          "path": "/trUyxMAR4Z8XHfWi1U?ed=2560"
+        },
+        "tlsSettings": {
+          "allowInsecure": false,
+          "fingerprint": "randomized",
+          "alpn": [
+            "h2",
+            "http/1.1"
+          ],
+          "serverName": "Bia-PAIN-BACHe-2R5.pAges.Dev"
+        }
+      },
+      "tag": "prox-19"
+    },
+    {
+      "mux": {
+        "concurrency": 8,
+        "enabled": true,
+        "xudpConcurrency": 16,
+        "xudpProxyUDP443": "reject"
+      },
+      "protocol": "vless",
+      "settings": {
+        "vnext": [
+          {
+            "address": "uk-full.privateip.net",
+            "port": 443,
+            "users": [
+              {
+                "encryption": "none",
+                "id": "b6c96130-b47f-494a-8daa-f306a994dfc1",
+                "level": 8,
+                "security": "auto"
+              }
+            ]
+          }
+        ]
+      },
+      "streamSettings": {
+        "network": "ws",
+        "security": "tls",
+        "sockopt": {
+          "dialerProxy": "prox-20",
+          "tcpNoDelay": true
+        },
+        "tlsSettings": {
+          "allowInsecure": false,
+          "alpn": []
+        },
+        "wsSettings": {
+          "headers": {},
+          "path": "/VLESS"
+        }
+      },
+      "tag": "chain-20"
+    },
+    {
+      "protocol": "trojan",
+      "settings": {
+        "servers": [
+          {
+            "address": "23.227.38.233",
+            "port": 443,
+            "password": "REvil",
+            "level": 8
+          }
+        ]
+      },
+      "streamSettings": {
+        "network": "ws",
+        "security": "tls",
+        "sockopt": {
+          "dialerProxy": "fragment"
+        },
+        "wsSettings": {
+          "headers": {
+            "Host": "bia-pain-bache-2r5.pages.dev"
+          },
+          "path": "/trcBixwO3qeHPGp0gg?ed=2560"
+        },
+        "tlsSettings": {
+          "allowInsecure": false,
+          "fingerprint": "randomized",
+          "alpn": [
+            "h2",
+            "http/1.1"
+          ],
+          "serverName": "BIa-pAiN-BAchE-2R5.PaGES.DEV"
+        }
+      },
+      "tag": "prox-20"
+    },
+    {
+      "mux": {
+        "concurrency": 8,
+        "enabled": true,
+        "xudpConcurrency": 16,
+        "xudpProxyUDP443": "reject"
+      },
+      "protocol": "vless",
+      "settings": {
+        "vnext": [
+          {
+            "address": "uk-full.privateip.net",
+            "port": 443,
+            "users": [
+              {
+                "encryption": "none",
+                "id": "b6c96130-b47f-494a-8daa-f306a994dfc1",
+                "level": 8,
+                "security": "auto"
+              }
+            ]
+          }
+        ]
+      },
+      "streamSettings": {
+        "network": "ws",
+        "security": "tls",
+        "sockopt": {
+          "dialerProxy": "prox-21",
+          "tcpNoDelay": true
+        },
+        "tlsSettings": {
+          "allowInsecure": false,
+          "alpn": []
+        },
+        "wsSettings": {
+          "headers": {},
+          "path": "/VLESS"
+        }
+      },
+      "tag": "chain-21"
+    },
+    {
+      "protocol": "trojan",
+      "settings": {
+        "servers": [
+          {
+            "address": "23.227.38.139",
+            "port": 443,
+            "password": "REvil",
+            "level": 8
+          }
+        ]
+      },
+      "streamSettings": {
+        "network": "ws",
+        "security": "tls",
+        "sockopt": {
+          "dialerProxy": "fragment"
+        },
+        "wsSettings": {
+          "headers": {
+            "Host": "bia-pain-bache-2r5.pages.dev"
+          },
+          "path": "/trgB1DTnTFmfvFCo8K?ed=2560"
+        },
+        "tlsSettings": {
+          "allowInsecure": false,
+          "fingerprint": "randomized",
+          "alpn": [
+            "h2",
+            "http/1.1"
+          ],
+          "serverName": "Bia-paIn-bAcHE-2r5.pAGES.dev"
+        }
+      },
+      "tag": "prox-21"
+    },
+    {
+      "mux": {
+        "concurrency": 8,
+        "enabled": true,
+        "xudpConcurrency": 16,
+        "xudpProxyUDP443": "reject"
+      },
+      "protocol": "vless",
+      "settings": {
+        "vnext": [
+          {
+            "address": "uk-full.privateip.net",
+            "port": 443,
+            "users": [
+              {
+                "encryption": "none",
+                "id": "b6c96130-b47f-494a-8daa-f306a994dfc1",
+                "level": 8,
+                "security": "auto"
+              }
+            ]
+          }
+        ]
+      },
+      "streamSettings": {
+        "network": "ws",
+        "security": "tls",
+        "sockopt": {
+          "dialerProxy": "prox-22",
+          "tcpNoDelay": true
+        },
+        "tlsSettings": {
+          "allowInsecure": false,
+          "alpn": []
+        },
+        "wsSettings": {
+          "headers": {},
+          "path": "/VLESS"
+        }
+      },
+      "tag": "chain-22"
+    },
+    {
+      "protocol": "trojan",
+      "settings": {
+        "servers": [
+          {
+            "address": "23.227.38.63",
+            "port": 443,
+            "password": "REvil",
+            "level": 8
+          }
+        ]
+      },
+      "streamSettings": {
+        "network": "ws",
+        "security": "tls",
+        "sockopt": {
+          "dialerProxy": "fragment"
+        },
+        "wsSettings": {
+          "headers": {
+            "Host": "bia-pain-bache-2r5.pages.dev"
+          },
+          "path": "/trgr7XRCbIFrCFSB2i?ed=2560"
+        },
+        "tlsSettings": {
+          "allowInsecure": false,
+          "fingerprint": "randomized",
+          "alpn": [
+            "h2",
+            "http/1.1"
+          ],
+          "serverName": "BiA-Pain-bAChE-2r5.pagES.DEV"
+        }
+      },
+      "tag": "prox-22"
+    },
+    {
+      "mux": {
+        "concurrency": 8,
+        "enabled": true,
+        "xudpConcurrency": 16,
+        "xudpProxyUDP443": "reject"
+      },
+      "protocol": "vless",
+      "settings": {
+        "vnext": [
+          {
+            "address": "uk-full.privateip.net",
+            "port": 443,
+            "users": [
+              {
+                "encryption": "none",
+                "id": "b6c96130-b47f-494a-8daa-f306a994dfc1",
+                "level": 8,
+                "security": "auto"
+              }
+            ]
+          }
+        ]
+      },
+      "streamSettings": {
+        "network": "ws",
+        "security": "tls",
+        "sockopt": {
+          "dialerProxy": "prox-23",
+          "tcpNoDelay": true
+        },
+        "tlsSettings": {
+          "allowInsecure": false,
+          "alpn": []
+        },
+        "wsSettings": {
+          "headers": {},
+          "path": "/VLESS"
+        }
+      },
+      "tag": "chain-23"
+    },
+    {
+      "protocol": "trojan",
+      "settings": {
+        "servers": [
+          {
+            "address": "23.227.38.95",
+            "port": 443,
+            "password": "REvil",
+            "level": 8
+          }
+        ]
+      },
+      "streamSettings": {
+        "network": "ws",
+        "security": "tls",
+        "sockopt": {
+          "dialerProxy": "fragment"
+        },
+        "wsSettings": {
+          "headers": {
+            "Host": "bia-pain-bache-2r5.pages.dev"
+          },
+          "path": "/trkZWRX67xttbiNIck?ed=2560"
+        },
+        "tlsSettings": {
+          "allowInsecure": false,
+          "fingerprint": "randomized",
+          "alpn": [
+            "h2",
+            "http/1.1"
+          ],
+          "serverName": "Bia-pAIn-BACHe-2r5.paGes.DEv"
+        }
+      },
+      "tag": "prox-23"
+    },
+    {
+      "mux": {
+        "concurrency": 8,
+        "enabled": true,
+        "xudpConcurrency": 16,
+        "xudpProxyUDP443": "reject"
+      },
+      "protocol": "vless",
+      "settings": {
+        "vnext": [
+          {
+            "address": "uk-full.privateip.net",
+            "port": 443,
+            "users": [
+              {
+                "encryption": "none",
+                "id": "b6c96130-b47f-494a-8daa-f306a994dfc1",
+                "level": 8,
+                "security": "auto"
+              }
+            ]
+          }
+        ]
+      },
+      "streamSettings": {
+        "network": "ws",
+        "security": "tls",
+        "sockopt": {
+          "dialerProxy": "prox-24",
+          "tcpNoDelay": true
+        },
+        "tlsSettings": {
+          "allowInsecure": false,
+          "alpn": []
+        },
+        "wsSettings": {
+          "headers": {},
+          "path": "/VLESS"
+        }
+      },
+      "tag": "chain-24"
+    },
+    {
+      "protocol": "trojan",
+      "settings": {
+        "servers": [
+          {
+            "address": "23.227.38.205",
+            "port": 443,
+            "password": "REvil",
+            "level": 8
+          }
+        ]
+      },
+      "streamSettings": {
+        "network": "ws",
+        "security": "tls",
+        "sockopt": {
+          "dialerProxy": "fragment"
+        },
+        "wsSettings": {
+          "headers": {
+            "Host": "bia-pain-bache-2r5.pages.dev"
+          },
+          "path": "/trqWPan4lMxOB2ScvL?ed=2560"
+        },
+        "tlsSettings": {
+          "allowInsecure": false,
+          "fingerprint": "randomized",
+          "alpn": [
+            "h2",
+            "http/1.1"
+          ],
+          "serverName": "biA-PAIN-bAche-2r5.pAgES.deV"
+        }
+      },
+      "tag": "prox-24"
+    },
+    {
+      "tag": "fragment",
+      "protocol": "freedom",
+      "settings": {
+        "fragment": {
+          "packets": "tlshello",
+          "length": "10-20",
+          "interval": "10-10"
+        },
+        "domainStrategy": "UseIP"
+      },
+      "streamSettings": {
+        "sockopt": {
+          "tcpKeepAliveIdle": 100,
+          "tcpNoDelay": true
+        }
+      }
+    },
+    {
+      "protocol": "dns",
+      "tag": "dns-out"
+    },
+    {
+      "protocol": "freedom",
+      "settings": {},
+      "tag": "direct"
+    },
+    {
+      "protocol": "blackhole",
+      "settings": {
+        "response": {
+          "type": "http"
+        }
+      },
+      "tag": "block"
+    }
+  ],
+  "policy": {
+    "levels": {
+      "8": {
+        "connIdle": 300,
+        "downlinkOnly": 1,
+        "handshake": 4,
+        "uplinkOnly": 1
+      }
+    },
+    "system": {
+      "statsOutboundUplink": true,
+      "statsOutboundDownlink": true
+    }
+  },
+  "routing": {
+    "domainStrategy": "IPIfNonMatch",
+    "rules": [
+      {
+        "inboundTag": [
+          "dns-in"
+        ],
+        "outboundTag": "dns-out",
+        "type": "field"
+      },
+      {
+        "inboundTag": [
+          "socks-in",
+          "http-in"
+        ],
+        "port": "53",
+        "outboundTag": "dns-out",
+        "type": "field"
+      },
+      {
+        "ip": [
+          "8.8.8.8"
+        ],
+        "port": "53",
+        "outboundTag": "direct",
+        "type": "field"
+      },
+      {
+        "domain": [
+          "geosite:private",
+          "geosite:category-ir",
+          "geosite:cn",
+          "geosite:category-ru"
+        ],
+        "outboundTag": "direct",
+        "type": "field"
+      },
+      {
+        "ip": [
+          "geoip:private",
+          "geoip:ir",
+          "geoip:cn",
+          "geoip:ru"
+        ],
+        "outboundTag": "direct",
+        "type": "field"
+      },
+      {
+        "network": "udp",
+        "port": "443",
+        "outboundTag": "block",
+        "type": "field"
+      },
+      {
+        "network": "tcp,udp",
+        "balancerTag": "all",
+        "type": "field"
+      }
+    ],
+    "balancers": [
+      {
+        "tag": "all",
+        "selector": [
+          "chain"
+        ],
+        "strategy": {
+          "type": "leastPing"
+        },
+        "fallbackTag": "chain-2"
+      }
+    ]
+  },
+  "observatory": {
+    "probeInterval": "30s",
+    "probeURL": "http://www.gstatic.com/generate_204",
+    "subjectSelector": [
+      "chain"
+    ],
+    "EnableConcurrency": true
+  },
+  "stats": {}
+}
