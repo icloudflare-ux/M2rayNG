@@ -1,5 +1,5 @@
 {
-  "remarks": " M2rayNG Super Config UK GB🏆",
+  "remarks": "M2rayNG Pro| Super Config  GB🏆",
   "log": {
     "loglevel": "warning"
   },
@@ -95,12 +95,12 @@
       "settings": {
         "vnext": [
           {
-            "address": "us1.socifiles.com",
+            "address": "uk-full.privateip.net",
             "port": 443,
             "users": [
               {
                 "encryption": "none",
-                "id": "c7b2afc0-9a35-11ef-b1ee-1239d0255272",
+                "id": "b6c96130-b47f-494a-8daa-f306a994dfc1",
                 "level": 8,
                 "security": "auto"
               }
@@ -116,12 +116,12 @@
           "tcpNoDelay": true
         },
         "tlsSettings": {
-          "allowInsecure": true,
+          "allowInsecure": false,
           "alpn": []
         },
         "wsSettings": {
           "headers": {},
-          "path": "/vlws"
+          "path": "/VLESS"
         }
       },
       "tag": "chain-1"
@@ -147,23 +147,24 @@
         "network": "ws",
         "security": "tls",
         "sockopt": {
-          "dialerProxy": "fragment"
+          "tcpKeepAliveIdle": 100,
+          "tcpNoDelay": true
         },
         "wsSettings": {
           "headers": {
             "Host": "bia-pain-bache-2r5.pages.dev",
             "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/127.0.0.0 Safari/537.36"
           },
-          "path": "/NVAQf240N4Oqr6e7?ed=2560"
+          "path": "/ZsmLxt5hI2EdG5xM?ed=2560"
         },
         "tlsSettings": {
-          "allowInsecure": true,
+          "allowInsecure": false,
           "fingerprint": "randomized",
           "alpn": [
             "h2",
             "http/1.1"
           ],
-          "serverName": "BIA-PaIn-BachE-2r5.paGes.Dev"
+          "serverName": "BIa-PAiN-bACHe-2R5.PAGEs.dEV"
         }
       },
       "tag": "prox-1"
@@ -179,12 +180,12 @@
       "settings": {
         "vnext": [
           {
-            "address": "us1.socifiles.com",
+            "address": "uk-full.privateip.net",
             "port": 443,
             "users": [
               {
                 "encryption": "none",
-                "id": "c7b2afc0-9a35-11ef-b1ee-1239d0255272",
+                "id": "b6c96130-b47f-494a-8daa-f306a994dfc1",
                 "level": 8,
                 "security": "auto"
               }
@@ -200,12 +201,12 @@
           "tcpNoDelay": true
         },
         "tlsSettings": {
-          "allowInsecure": true,
+          "allowInsecure": false,
           "alpn": []
         },
         "wsSettings": {
           "headers": {},
-          "path": "/vlws"
+          "path": "/VLESS"
         }
       },
       "tag": "chain-2"
@@ -231,23 +232,24 @@
         "network": "ws",
         "security": "tls",
         "sockopt": {
-          "dialerProxy": "fragment"
+          "tcpKeepAliveIdle": 100,
+          "tcpNoDelay": true
         },
         "wsSettings": {
           "headers": {
             "Host": "bia-pain-bache-2r5.pages.dev",
             "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/127.0.0.0 Safari/537.36"
           },
-          "path": "/5n0AsAnVbq7hKaLT?ed=2560"
+          "path": "/4oAXeE01yjSS07YE?ed=2560"
         },
         "tlsSettings": {
-          "allowInsecure": true,
+          "allowInsecure": false,
           "fingerprint": "randomized",
           "alpn": [
             "h2",
             "http/1.1"
           ],
-          "serverName": "BIA-PaiN-BAcHE-2R5.pAgEs.dEV"
+          "serverName": "bia-PaIN-bache-2r5.pAGES.DEV"
         }
       },
       "tag": "prox-2"
@@ -263,12 +265,12 @@
       "settings": {
         "vnext": [
           {
-            "address": "us1.socifiles.com",
+            "address": "uk-full.privateip.net",
             "port": 443,
             "users": [
               {
                 "encryption": "none",
-                "id": "c7b2afc0-9a35-11ef-b1ee-1239d0255272",
+                "id": "b6c96130-b47f-494a-8daa-f306a994dfc1",
                 "level": 8,
                 "security": "auto"
               }
@@ -284,12 +286,12 @@
           "tcpNoDelay": true
         },
         "tlsSettings": {
-          "allowInsecure": true,
+          "allowInsecure": false,
           "alpn": []
         },
         "wsSettings": {
           "headers": {},
-          "path": "/vlws"
+          "path": "/VLESS"
         }
       },
       "tag": "chain-3"
@@ -299,7 +301,7 @@
       "settings": {
         "vnext": [
           {
-            "address": "188.114.96.2",
+            "address": "188.114.96.3",
             "port": 443,
             "users": [
               {
@@ -315,23 +317,24 @@
         "network": "ws",
         "security": "tls",
         "sockopt": {
-          "dialerProxy": "fragment"
+          "tcpKeepAliveIdle": 100,
+          "tcpNoDelay": true
         },
         "wsSettings": {
           "headers": {
             "Host": "bia-pain-bache-2r5.pages.dev",
             "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/127.0.0.0 Safari/537.36"
           },
-          "path": "/FAeLlDYA5JoJyvxi?ed=2560"
+          "path": "/TopuAhP6SE1OOKyK?ed=2560"
         },
         "tlsSettings": {
-          "allowInsecure": true,
+          "allowInsecure": false,
           "fingerprint": "randomized",
           "alpn": [
             "h2",
             "http/1.1"
           ],
-          "serverName": "BIa-PaIn-BAChe-2R5.Pages.Dev"
+          "serverName": "bIA-PAin-BaChe-2R5.PAGEs.DEv"
         }
       },
       "tag": "prox-3"
@@ -347,12 +350,12 @@
       "settings": {
         "vnext": [
           {
-            "address": "us1.socifiles.com",
+            "address": "uk-full.privateip.net",
             "port": 443,
             "users": [
               {
                 "encryption": "none",
-                "id": "c7b2afc0-9a35-11ef-b1ee-1239d0255272",
+                "id": "b6c96130-b47f-494a-8daa-f306a994dfc1",
                 "level": 8,
                 "security": "auto"
               }
@@ -368,12 +371,12 @@
           "tcpNoDelay": true
         },
         "tlsSettings": {
-          "allowInsecure": true,
+          "allowInsecure": false,
           "alpn": []
         },
         "wsSettings": {
           "headers": {},
-          "path": "/vlws"
+          "path": "/VLESS"
         }
       },
       "tag": "chain-4"
@@ -383,7 +386,7 @@
       "settings": {
         "vnext": [
           {
-            "address": "188.114.97.2",
+            "address": "188.114.97.3",
             "port": 443,
             "users": [
               {
@@ -399,23 +402,24 @@
         "network": "ws",
         "security": "tls",
         "sockopt": {
-          "dialerProxy": "fragment"
+          "tcpKeepAliveIdle": 100,
+          "tcpNoDelay": true
         },
         "wsSettings": {
           "headers": {
             "Host": "bia-pain-bache-2r5.pages.dev",
             "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/127.0.0.0 Safari/537.36"
           },
-          "path": "/N0UPZjj0g7mj591w?ed=2560"
+          "path": "/4cUrw8PA48fvuQ55?ed=2560"
         },
         "tlsSettings": {
-          "allowInsecure": true,
+          "allowInsecure": false,
           "fingerprint": "randomized",
           "alpn": [
             "h2",
             "http/1.1"
           ],
-          "serverName": "BIA-pAin-bacHe-2R5.pagES.dEV"
+          "serverName": "biA-pAin-bACHe-2R5.pAGes.DeV"
         }
       },
       "tag": "prox-4"
@@ -431,12 +435,12 @@
       "settings": {
         "vnext": [
           {
-            "address": "us1.socifiles.com",
+            "address": "uk-full.privateip.net",
             "port": 443,
             "users": [
               {
                 "encryption": "none",
-                "id": "c7b2afc0-9a35-11ef-b1ee-1239d0255272",
+                "id": "b6c96130-b47f-494a-8daa-f306a994dfc1",
                 "level": 8,
                 "security": "auto"
               }
@@ -452,12 +456,12 @@
           "tcpNoDelay": true
         },
         "tlsSettings": {
-          "allowInsecure": true,
+          "allowInsecure": false,
           "alpn": []
         },
         "wsSettings": {
           "headers": {},
-          "path": "/vlws"
+          "path": "/VLESS"
         }
       },
       "tag": "chain-5"
@@ -467,7 +471,7 @@
       "settings": {
         "vnext": [
           {
-            "address": "[2a06:98c1:3121::2]",
+            "address": "[2a06:98c1:3120::3]",
             "port": 443,
             "users": [
               {
@@ -483,23 +487,24 @@
         "network": "ws",
         "security": "tls",
         "sockopt": {
-          "dialerProxy": "fragment"
+          "tcpKeepAliveIdle": 100,
+          "tcpNoDelay": true
         },
         "wsSettings": {
           "headers": {
             "Host": "bia-pain-bache-2r5.pages.dev",
             "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/127.0.0.0 Safari/537.36"
           },
-          "path": "/jKylWwxMvF9KJX1T?ed=2560"
+          "path": "/mdfuIZzROnYDNqDU?ed=2560"
         },
         "tlsSettings": {
-          "allowInsecure": true,
+          "allowInsecure": false,
           "fingerprint": "randomized",
           "alpn": [
             "h2",
             "http/1.1"
           ],
-          "serverName": "biA-pAiN-baCHe-2r5.PAgEs.dEV"
+          "serverName": "BIa-PaIn-baCHE-2r5.PAGes.Dev"
         }
       },
       "tag": "prox-5"
@@ -515,12 +520,12 @@
       "settings": {
         "vnext": [
           {
-            "address": "us1.socifiles.com",
+            "address": "uk-full.privateip.net",
             "port": 443,
             "users": [
               {
                 "encryption": "none",
-                "id": "c7b2afc0-9a35-11ef-b1ee-1239d0255272",
+                "id": "b6c96130-b47f-494a-8daa-f306a994dfc1",
                 "level": 8,
                 "security": "auto"
               }
@@ -536,12 +541,12 @@
           "tcpNoDelay": true
         },
         "tlsSettings": {
-          "allowInsecure": true,
+          "allowInsecure": false,
           "alpn": []
         },
         "wsSettings": {
           "headers": {},
-          "path": "/vlws"
+          "path": "/VLESS"
         }
       },
       "tag": "chain-6"
@@ -551,7 +556,7 @@
       "settings": {
         "vnext": [
           {
-            "address": "[2a06:98c1:3120::2]",
+            "address": "[2a06:98c1:3121::3]",
             "port": 443,
             "users": [
               {
@@ -567,23 +572,24 @@
         "network": "ws",
         "security": "tls",
         "sockopt": {
-          "dialerProxy": "fragment"
+          "tcpKeepAliveIdle": 100,
+          "tcpNoDelay": true
         },
         "wsSettings": {
           "headers": {
             "Host": "bia-pain-bache-2r5.pages.dev",
             "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/127.0.0.0 Safari/537.36"
           },
-          "path": "/Cg3aWtIpnrM1mVpQ?ed=2560"
+          "path": "/oMIUHWSoGIIPCPp2?ed=2560"
         },
         "tlsSettings": {
-          "allowInsecure": true,
+          "allowInsecure": false,
           "fingerprint": "randomized",
           "alpn": [
             "h2",
             "http/1.1"
           ],
-          "serverName": "bIA-PaIN-baChe-2R5.paGes.deV"
+          "serverName": "bia-paiN-BACHE-2r5.PAgES.dEv"
         }
       },
       "tag": "prox-6"
@@ -599,12 +605,12 @@
       "settings": {
         "vnext": [
           {
-            "address": "us1.socifiles.com",
+            "address": "uk-full.privateip.net",
             "port": 443,
             "users": [
               {
                 "encryption": "none",
-                "id": "c7b2afc0-9a35-11ef-b1ee-1239d0255272",
+                "id": "b6c96130-b47f-494a-8daa-f306a994dfc1",
                 "level": 8,
                 "security": "auto"
               }
@@ -620,12 +626,12 @@
           "tcpNoDelay": true
         },
         "tlsSettings": {
-          "allowInsecure": true,
+          "allowInsecure": false,
           "alpn": []
         },
         "wsSettings": {
           "headers": {},
-          "path": "/vlws"
+          "path": "/VLESS"
         }
       },
       "tag": "chain-7"
@@ -651,23 +657,24 @@
         "network": "ws",
         "security": "tls",
         "sockopt": {
-          "dialerProxy": "fragment"
+          "tcpKeepAliveIdle": 100,
+          "tcpNoDelay": true
         },
         "wsSettings": {
           "headers": {
             "Host": "bia-pain-bache-2r5.pages.dev",
             "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/127.0.0.0 Safari/537.36"
           },
-          "path": "/RExaFn3wQHqyZKr0?ed=2560"
+          "path": "/O8VAXEZoer1tMtLD?ed=2560"
         },
         "tlsSettings": {
-          "allowInsecure": true,
+          "allowInsecure": false,
           "fingerprint": "randomized",
           "alpn": [
             "h2",
             "http/1.1"
           ],
-          "serverName": "Bia-pAin-baChe-2r5.PagEs.dEV"
+          "serverName": "bia-PAIn-bacHe-2R5.PAGES.DeV"
         }
       },
       "tag": "prox-7"
@@ -683,12 +690,12 @@
       "settings": {
         "vnext": [
           {
-            "address": "us1.socifiles.com",
+            "address": "uk-full.privateip.net",
             "port": 443,
             "users": [
               {
                 "encryption": "none",
-                "id": "c7b2afc0-9a35-11ef-b1ee-1239d0255272",
+                "id": "b6c96130-b47f-494a-8daa-f306a994dfc1",
                 "level": 8,
                 "security": "auto"
               }
@@ -704,12 +711,12 @@
           "tcpNoDelay": true
         },
         "tlsSettings": {
-          "allowInsecure": true,
+          "allowInsecure": false,
           "alpn": []
         },
         "wsSettings": {
           "headers": {},
-          "path": "/vlws"
+          "path": "/VLESS"
         }
       },
       "tag": "chain-8"
@@ -735,23 +742,24 @@
         "network": "ws",
         "security": "tls",
         "sockopt": {
-          "dialerProxy": "fragment"
+          "tcpKeepAliveIdle": 100,
+          "tcpNoDelay": true
         },
         "wsSettings": {
           "headers": {
             "Host": "bia-pain-bache-2r5.pages.dev",
             "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/127.0.0.0 Safari/537.36"
           },
-          "path": "/SZ7ui36JKsgAmCT0?ed=2560"
+          "path": "/9DTwNOrqjYWKaQAb?ed=2560"
         },
         "tlsSettings": {
-          "allowInsecure": true,
+          "allowInsecure": false,
           "fingerprint": "randomized",
           "alpn": [
             "h2",
             "http/1.1"
           ],
-          "serverName": "biA-PaIN-BACHe-2R5.pAGES.DeV"
+          "serverName": "BiA-pain-BAche-2r5.pAGEs.deV"
         }
       },
       "tag": "prox-8"
@@ -767,12 +775,12 @@
       "settings": {
         "vnext": [
           {
-            "address": "us1.socifiles.com",
+            "address": "uk-full.privateip.net",
             "port": 443,
             "users": [
               {
                 "encryption": "none",
-                "id": "c7b2afc0-9a35-11ef-b1ee-1239d0255272",
+                "id": "b6c96130-b47f-494a-8daa-f306a994dfc1",
                 "level": 8,
                 "security": "auto"
               }
@@ -788,12 +796,12 @@
           "tcpNoDelay": true
         },
         "tlsSettings": {
-          "allowInsecure": true,
+          "allowInsecure": false,
           "alpn": []
         },
         "wsSettings": {
           "headers": {},
-          "path": "/vlws"
+          "path": "/VLESS"
         }
       },
       "tag": "chain-9"
@@ -819,23 +827,24 @@
         "network": "ws",
         "security": "tls",
         "sockopt": {
-          "dialerProxy": "fragment"
+          "tcpKeepAliveIdle": 100,
+          "tcpNoDelay": true
         },
         "wsSettings": {
           "headers": {
             "Host": "bia-pain-bache-2r5.pages.dev",
             "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/127.0.0.0 Safari/537.36"
           },
-          "path": "/Z3i4c9qrGxtsSECd?ed=2560"
+          "path": "/v3IH0gAPFkhIDRaw?ed=2560"
         },
         "tlsSettings": {
-          "allowInsecure": true,
+          "allowInsecure": false,
           "fingerprint": "randomized",
           "alpn": [
             "h2",
             "http/1.1"
           ],
-          "serverName": "bIa-PAIN-bACHE-2R5.PageS.deV"
+          "serverName": "biA-paIn-BaChE-2R5.PAges.DeV"
         }
       },
       "tag": "prox-9"
@@ -851,12 +860,12 @@
       "settings": {
         "vnext": [
           {
-            "address": "us1.socifiles.com",
+            "address": "uk-full.privateip.net",
             "port": 443,
             "users": [
               {
                 "encryption": "none",
-                "id": "c7b2afc0-9a35-11ef-b1ee-1239d0255272",
+                "id": "b6c96130-b47f-494a-8daa-f306a994dfc1",
                 "level": 8,
                 "security": "auto"
               }
@@ -872,12 +881,12 @@
           "tcpNoDelay": true
         },
         "tlsSettings": {
-          "allowInsecure": true,
+          "allowInsecure": false,
           "alpn": []
         },
         "wsSettings": {
           "headers": {},
-          "path": "/vlws"
+          "path": "/VLESS"
         }
       },
       "tag": "chain-10"
@@ -903,23 +912,24 @@
         "network": "ws",
         "security": "tls",
         "sockopt": {
-          "dialerProxy": "fragment"
+          "tcpKeepAliveIdle": 100,
+          "tcpNoDelay": true
         },
         "wsSettings": {
           "headers": {
             "Host": "bia-pain-bache-2r5.pages.dev",
             "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/127.0.0.0 Safari/537.36"
           },
-          "path": "/hVDddjkrWDynLK9S?ed=2560"
+          "path": "/BNiK2ht0WJImEIMn?ed=2560"
         },
         "tlsSettings": {
-          "allowInsecure": true,
+          "allowInsecure": false,
           "fingerprint": "randomized",
           "alpn": [
             "h2",
             "http/1.1"
           ],
-          "serverName": "bIa-Pain-BaCHe-2R5.Pages.deV"
+          "serverName": "bIa-pAiN-baChE-2R5.PAgeS.DEv"
         }
       },
       "tag": "prox-10"
@@ -935,12 +945,12 @@
       "settings": {
         "vnext": [
           {
-            "address": "us1.socifiles.com",
+            "address": "uk-full.privateip.net",
             "port": 443,
             "users": [
               {
                 "encryption": "none",
-                "id": "c7b2afc0-9a35-11ef-b1ee-1239d0255272",
+                "id": "b6c96130-b47f-494a-8daa-f306a994dfc1",
                 "level": 8,
                 "security": "auto"
               }
@@ -956,12 +966,12 @@
           "tcpNoDelay": true
         },
         "tlsSettings": {
-          "allowInsecure": true,
+          "allowInsecure": false,
           "alpn": []
         },
         "wsSettings": {
           "headers": {},
-          "path": "/vlws"
+          "path": "/VLESS"
         }
       },
       "tag": "chain-11"
@@ -987,23 +997,24 @@
         "network": "ws",
         "security": "tls",
         "sockopt": {
-          "dialerProxy": "fragment"
+          "tcpKeepAliveIdle": 100,
+          "tcpNoDelay": true
         },
         "wsSettings": {
           "headers": {
             "Host": "bia-pain-bache-2r5.pages.dev",
             "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/127.0.0.0 Safari/537.36"
           },
-          "path": "/gZVjD4d8k5nRCITQ?ed=2560"
+          "path": "/KSs43jWVsIDZeowg?ed=2560"
         },
         "tlsSettings": {
-          "allowInsecure": true,
+          "allowInsecure": false,
           "fingerprint": "randomized",
           "alpn": [
             "h2",
             "http/1.1"
           ],
-          "serverName": "bIa-PAIN-BAchE-2r5.paGES.dEv"
+          "serverName": "bIA-PaiN-BAChe-2R5.paGeS.dev"
         }
       },
       "tag": "prox-11"
@@ -1019,12 +1030,12 @@
       "settings": {
         "vnext": [
           {
-            "address": "us1.socifiles.com",
+            "address": "uk-full.privateip.net",
             "port": 443,
             "users": [
               {
                 "encryption": "none",
-                "id": "c7b2afc0-9a35-11ef-b1ee-1239d0255272",
+                "id": "b6c96130-b47f-494a-8daa-f306a994dfc1",
                 "level": 8,
                 "security": "auto"
               }
@@ -1040,12 +1051,12 @@
           "tcpNoDelay": true
         },
         "tlsSettings": {
-          "allowInsecure": true,
+          "allowInsecure": false,
           "alpn": []
         },
         "wsSettings": {
           "headers": {},
-          "path": "/vlws"
+          "path": "/VLESS"
         }
       },
       "tag": "chain-12"
@@ -1071,23 +1082,24 @@
         "network": "ws",
         "security": "tls",
         "sockopt": {
-          "dialerProxy": "fragment"
+          "tcpKeepAliveIdle": 100,
+          "tcpNoDelay": true
         },
         "wsSettings": {
           "headers": {
             "Host": "bia-pain-bache-2r5.pages.dev",
             "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/127.0.0.0 Safari/537.36"
           },
-          "path": "/ExXTt8J1BHpAH1cR?ed=2560"
+          "path": "/4G9pim8f87aL1gLx?ed=2560"
         },
         "tlsSettings": {
-          "allowInsecure": true,
+          "allowInsecure": false,
           "fingerprint": "randomized",
           "alpn": [
             "h2",
             "http/1.1"
           ],
-          "serverName": "BIa-pAiN-baCHe-2R5.pagES.DEv"
+          "serverName": "Bia-PaIN-baChE-2R5.paGeS.DEv"
         }
       },
       "tag": "prox-12"
@@ -1103,12 +1115,12 @@
       "settings": {
         "vnext": [
           {
-            "address": "us1.socifiles.com",
+            "address": "uk-full.privateip.net",
             "port": 443,
             "users": [
               {
                 "encryption": "none",
-                "id": "c7b2afc0-9a35-11ef-b1ee-1239d0255272",
+                "id": "b6c96130-b47f-494a-8daa-f306a994dfc1",
                 "level": 8,
                 "security": "auto"
               }
@@ -1124,12 +1136,12 @@
           "tcpNoDelay": true
         },
         "tlsSettings": {
-          "allowInsecure": true,
+          "allowInsecure": false,
           "alpn": []
         },
         "wsSettings": {
           "headers": {},
-          "path": "/vlws"
+          "path": "/VLESS"
         }
       },
       "tag": "chain-13"
@@ -1150,22 +1162,23 @@
         "network": "ws",
         "security": "tls",
         "sockopt": {
-          "dialerProxy": "fragment"
+          "tcpKeepAliveIdle": 100,
+          "tcpNoDelay": true
         },
         "wsSettings": {
           "headers": {
             "Host": "bia-pain-bache-2r5.pages.dev"
           },
-          "path": "/trIjZeokCc6u962KN5?ed=2560"
+          "path": "/trKv4ni1MTMxyaxX74?ed=2560"
         },
         "tlsSettings": {
-          "allowInsecure": true,
+          "allowInsecure": false,
           "fingerprint": "randomized",
           "alpn": [
             "h2",
             "http/1.1"
           ],
-          "serverName": "biA-PAiN-bAChe-2r5.PaGes.DeV"
+          "serverName": "bIa-pain-bAChe-2R5.pAGEs.Dev"
         }
       },
       "tag": "prox-13"
@@ -1181,12 +1194,12 @@
       "settings": {
         "vnext": [
           {
-            "address": "us1.socifiles.com",
+            "address": "uk-full.privateip.net",
             "port": 443,
             "users": [
               {
                 "encryption": "none",
-                "id": "c7b2afc0-9a35-11ef-b1ee-1239d0255272",
+                "id": "b6c96130-b47f-494a-8daa-f306a994dfc1",
                 "level": 8,
                 "security": "auto"
               }
@@ -1202,12 +1215,12 @@
           "tcpNoDelay": true
         },
         "tlsSettings": {
-          "allowInsecure": true,
+          "allowInsecure": false,
           "alpn": []
         },
         "wsSettings": {
           "headers": {},
-          "path": "/vlws"
+          "path": "/VLESS"
         }
       },
       "tag": "chain-14"
@@ -1228,22 +1241,23 @@
         "network": "ws",
         "security": "tls",
         "sockopt": {
-          "dialerProxy": "fragment"
+          "tcpKeepAliveIdle": 100,
+          "tcpNoDelay": true
         },
         "wsSettings": {
           "headers": {
             "Host": "bia-pain-bache-2r5.pages.dev"
           },
-          "path": "/trSu9NtgNHzXakKJjJ?ed=2560"
+          "path": "/trDlceFLC0XtmSadZ0?ed=2560"
         },
         "tlsSettings": {
-          "allowInsecure": true,
+          "allowInsecure": false,
           "fingerprint": "randomized",
           "alpn": [
             "h2",
             "http/1.1"
           ],
-          "serverName": "BiA-PaIN-baCHe-2R5.Pages.dEv"
+          "serverName": "BIA-PAIn-bAcHe-2R5.paGeS.Dev"
         }
       },
       "tag": "prox-14"
@@ -1259,12 +1273,12 @@
       "settings": {
         "vnext": [
           {
-            "address": "us1.socifiles.com",
+            "address": "uk-full.privateip.net",
             "port": 443,
             "users": [
               {
                 "encryption": "none",
-                "id": "c7b2afc0-9a35-11ef-b1ee-1239d0255272",
+                "id": "b6c96130-b47f-494a-8daa-f306a994dfc1",
                 "level": 8,
                 "security": "auto"
               }
@@ -1280,12 +1294,12 @@
           "tcpNoDelay": true
         },
         "tlsSettings": {
-          "allowInsecure": true,
+          "allowInsecure": false,
           "alpn": []
         },
         "wsSettings": {
           "headers": {},
-          "path": "/vlws"
+          "path": "/VLESS"
         }
       },
       "tag": "chain-15"
@@ -1295,7 +1309,7 @@
       "settings": {
         "servers": [
           {
-            "address": "188.114.96.2",
+            "address": "188.114.96.3",
             "port": 443,
             "password": "REvil",
             "level": 8
@@ -1306,22 +1320,23 @@
         "network": "ws",
         "security": "tls",
         "sockopt": {
-          "dialerProxy": "fragment"
+          "tcpKeepAliveIdle": 100,
+          "tcpNoDelay": true
         },
         "wsSettings": {
           "headers": {
             "Host": "bia-pain-bache-2r5.pages.dev"
           },
-          "path": "/tr3eX9AHUti4Fos0rw?ed=2560"
+          "path": "/tr0RNXs5Q8ZgOHVYSt?ed=2560"
         },
         "tlsSettings": {
-          "allowInsecure": true,
+          "allowInsecure": false,
           "fingerprint": "randomized",
           "alpn": [
             "h2",
             "http/1.1"
           ],
-          "serverName": "bia-paIn-BaCHe-2R5.pAgEs.dEV"
+          "serverName": "BIa-PAIn-bAChE-2r5.PaGES.DeV"
         }
       },
       "tag": "prox-15"
@@ -1337,12 +1352,12 @@
       "settings": {
         "vnext": [
           {
-            "address": "us1.socifiles.com",
+            "address": "uk-full.privateip.net",
             "port": 443,
             "users": [
               {
                 "encryption": "none",
-                "id": "c7b2afc0-9a35-11ef-b1ee-1239d0255272",
+                "id": "b6c96130-b47f-494a-8daa-f306a994dfc1",
                 "level": 8,
                 "security": "auto"
               }
@@ -1358,12 +1373,12 @@
           "tcpNoDelay": true
         },
         "tlsSettings": {
-          "allowInsecure": true,
+          "allowInsecure": false,
           "alpn": []
         },
         "wsSettings": {
           "headers": {},
-          "path": "/vlws"
+          "path": "/VLESS"
         }
       },
       "tag": "chain-16"
@@ -1373,7 +1388,7 @@
       "settings": {
         "servers": [
           {
-            "address": "188.114.97.2",
+            "address": "188.114.97.3",
             "port": 443,
             "password": "REvil",
             "level": 8
@@ -1384,22 +1399,23 @@
         "network": "ws",
         "security": "tls",
         "sockopt": {
-          "dialerProxy": "fragment"
+          "tcpKeepAliveIdle": 100,
+          "tcpNoDelay": true
         },
         "wsSettings": {
           "headers": {
             "Host": "bia-pain-bache-2r5.pages.dev"
           },
-          "path": "/trXNqHKXMNugvk6edH?ed=2560"
+          "path": "/trgdLJnxp5uivCefG4?ed=2560"
         },
         "tlsSettings": {
-          "allowInsecure": true,
+          "allowInsecure": false,
           "fingerprint": "randomized",
           "alpn": [
             "h2",
             "http/1.1"
           ],
-          "serverName": "bia-paIN-bACHE-2r5.paGeS.DeV"
+          "serverName": "bia-PaIN-baChe-2r5.PaGeS.dEV"
         }
       },
       "tag": "prox-16"
@@ -1415,12 +1431,12 @@
       "settings": {
         "vnext": [
           {
-            "address": "us1.socifiles.com",
+            "address": "uk-full.privateip.net",
             "port": 443,
             "users": [
               {
                 "encryption": "none",
-                "id": "c7b2afc0-9a35-11ef-b1ee-1239d0255272",
+                "id": "b6c96130-b47f-494a-8daa-f306a994dfc1",
                 "level": 8,
                 "security": "auto"
               }
@@ -1436,12 +1452,12 @@
           "tcpNoDelay": true
         },
         "tlsSettings": {
-          "allowInsecure": true,
+          "allowInsecure": false,
           "alpn": []
         },
         "wsSettings": {
           "headers": {},
-          "path": "/vlws"
+          "path": "/VLESS"
         }
       },
       "tag": "chain-17"
@@ -1451,7 +1467,7 @@
       "settings": {
         "servers": [
           {
-            "address": "[2a06:98c1:3121::2]",
+            "address": "[2a06:98c1:3120::3]",
             "port": 443,
             "password": "REvil",
             "level": 8
@@ -1462,22 +1478,23 @@
         "network": "ws",
         "security": "tls",
         "sockopt": {
-          "dialerProxy": "fragment"
+          "tcpKeepAliveIdle": 100,
+          "tcpNoDelay": true
         },
         "wsSettings": {
           "headers": {
             "Host": "bia-pain-bache-2r5.pages.dev"
           },
-          "path": "/trgaQgC6w85YYMBowp?ed=2560"
+          "path": "/tr8ycwF8IA0eS39r64?ed=2560"
         },
         "tlsSettings": {
-          "allowInsecure": true,
+          "allowInsecure": false,
           "fingerprint": "randomized",
           "alpn": [
             "h2",
             "http/1.1"
           ],
-          "serverName": "bIA-PAIn-BaCHe-2R5.pagEs.DEV"
+          "serverName": "BiA-pAiN-bacHe-2R5.paGEs.DEv"
         }
       },
       "tag": "prox-17"
@@ -1493,12 +1510,12 @@
       "settings": {
         "vnext": [
           {
-            "address": "us1.socifiles.com",
+            "address": "uk-full.privateip.net",
             "port": 443,
             "users": [
               {
                 "encryption": "none",
-                "id": "c7b2afc0-9a35-11ef-b1ee-1239d0255272",
+                "id": "b6c96130-b47f-494a-8daa-f306a994dfc1",
                 "level": 8,
                 "security": "auto"
               }
@@ -1514,12 +1531,12 @@
           "tcpNoDelay": true
         },
         "tlsSettings": {
-          "allowInsecure": true,
+          "allowInsecure": false,
           "alpn": []
         },
         "wsSettings": {
           "headers": {},
-          "path": "/vlws"
+          "path": "/VLESS"
         }
       },
       "tag": "chain-18"
@@ -1529,7 +1546,7 @@
       "settings": {
         "servers": [
           {
-            "address": "[2a06:98c1:3120::2]",
+            "address": "[2a06:98c1:3121::3]",
             "port": 443,
             "password": "REvil",
             "level": 8
@@ -1540,22 +1557,23 @@
         "network": "ws",
         "security": "tls",
         "sockopt": {
-          "dialerProxy": "fragment"
+          "tcpKeepAliveIdle": 100,
+          "tcpNoDelay": true
         },
         "wsSettings": {
           "headers": {
             "Host": "bia-pain-bache-2r5.pages.dev"
           },
-          "path": "/traZnBozY4sV29zqLq?ed=2560"
+          "path": "/trKosBOvcwux545Oni?ed=2560"
         },
         "tlsSettings": {
-          "allowInsecure": true,
+          "allowInsecure": false,
           "fingerprint": "randomized",
           "alpn": [
             "h2",
             "http/1.1"
           ],
-          "serverName": "bia-pain-bacHE-2R5.PagES.DEV"
+          "serverName": "biA-Pain-baChE-2R5.PAGEs.dev"
         }
       },
       "tag": "prox-18"
@@ -1571,12 +1589,12 @@
       "settings": {
         "vnext": [
           {
-            "address": "us1.socifiles.com",
+            "address": "uk-full.privateip.net",
             "port": 443,
             "users": [
               {
                 "encryption": "none",
-                "id": "c7b2afc0-9a35-11ef-b1ee-1239d0255272",
+                "id": "b6c96130-b47f-494a-8daa-f306a994dfc1",
                 "level": 8,
                 "security": "auto"
               }
@@ -1592,12 +1610,12 @@
           "tcpNoDelay": true
         },
         "tlsSettings": {
-          "allowInsecure": true,
+          "allowInsecure": false,
           "alpn": []
         },
         "wsSettings": {
           "headers": {},
-          "path": "/vlws"
+          "path": "/VLESS"
         }
       },
       "tag": "chain-19"
@@ -1618,22 +1636,23 @@
         "network": "ws",
         "security": "tls",
         "sockopt": {
-          "dialerProxy": "fragment"
+          "tcpKeepAliveIdle": 100,
+          "tcpNoDelay": true
         },
         "wsSettings": {
           "headers": {
             "Host": "bia-pain-bache-2r5.pages.dev"
           },
-          "path": "/trI8C9SC78RPsJHvNb?ed=2560"
+          "path": "/trUWgMhAhAsavQ83rh?ed=2560"
         },
         "tlsSettings": {
-          "allowInsecure": true,
+          "allowInsecure": false,
           "fingerprint": "randomized",
           "alpn": [
             "h2",
             "http/1.1"
           ],
-          "serverName": "bIA-paIn-bache-2r5.PaGeS.DEv"
+          "serverName": "bIa-PaIN-bAche-2r5.pAGES.dEV"
         }
       },
       "tag": "prox-19"
@@ -1649,12 +1668,12 @@
       "settings": {
         "vnext": [
           {
-            "address": "us1.socifiles.com",
+            "address": "uk-full.privateip.net",
             "port": 443,
             "users": [
               {
                 "encryption": "none",
-                "id": "c7b2afc0-9a35-11ef-b1ee-1239d0255272",
+                "id": "b6c96130-b47f-494a-8daa-f306a994dfc1",
                 "level": 8,
                 "security": "auto"
               }
@@ -1670,12 +1689,12 @@
           "tcpNoDelay": true
         },
         "tlsSettings": {
-          "allowInsecure": true,
+          "allowInsecure": false,
           "alpn": []
         },
         "wsSettings": {
           "headers": {},
-          "path": "/vlws"
+          "path": "/VLESS"
         }
       },
       "tag": "chain-20"
@@ -1696,22 +1715,23 @@
         "network": "ws",
         "security": "tls",
         "sockopt": {
-          "dialerProxy": "fragment"
+          "tcpKeepAliveIdle": 100,
+          "tcpNoDelay": true
         },
         "wsSettings": {
           "headers": {
             "Host": "bia-pain-bache-2r5.pages.dev"
           },
-          "path": "/treKZod8LwcmosJhow?ed=2560"
+          "path": "/trK4yDuHFdXybbPiE1?ed=2560"
         },
         "tlsSettings": {
-          "allowInsecure": true,
+          "allowInsecure": false,
           "fingerprint": "randomized",
           "alpn": [
             "h2",
             "http/1.1"
           ],
-          "serverName": "bIA-PaIn-bAche-2R5.PaGes.DEV"
+          "serverName": "bia-PaiN-BaCHe-2r5.PagES.Dev"
         }
       },
       "tag": "prox-20"
@@ -1727,12 +1747,12 @@
       "settings": {
         "vnext": [
           {
-            "address": "us1.socifiles.com",
+            "address": "uk-full.privateip.net",
             "port": 443,
             "users": [
               {
                 "encryption": "none",
-                "id": "c7b2afc0-9a35-11ef-b1ee-1239d0255272",
+                "id": "b6c96130-b47f-494a-8daa-f306a994dfc1",
                 "level": 8,
                 "security": "auto"
               }
@@ -1748,12 +1768,12 @@
           "tcpNoDelay": true
         },
         "tlsSettings": {
-          "allowInsecure": true,
+          "allowInsecure": false,
           "alpn": []
         },
         "wsSettings": {
           "headers": {},
-          "path": "/vlws"
+          "path": "/VLESS"
         }
       },
       "tag": "chain-21"
@@ -1774,22 +1794,23 @@
         "network": "ws",
         "security": "tls",
         "sockopt": {
-          "dialerProxy": "fragment"
+          "tcpKeepAliveIdle": 100,
+          "tcpNoDelay": true
         },
         "wsSettings": {
           "headers": {
             "Host": "bia-pain-bache-2r5.pages.dev"
           },
-          "path": "/trn8amozaRX0EtnuCd?ed=2560"
+          "path": "/tra6FS5wBrZZla0mCc?ed=2560"
         },
         "tlsSettings": {
-          "allowInsecure": true,
+          "allowInsecure": false,
           "fingerprint": "randomized",
           "alpn": [
             "h2",
             "http/1.1"
           ],
-          "serverName": "Bia-PaIN-BacHE-2r5.PagEs.dev"
+          "serverName": "bIa-paIn-BAChe-2R5.PageS.DEV"
         }
       },
       "tag": "prox-21"
@@ -1805,12 +1826,12 @@
       "settings": {
         "vnext": [
           {
-            "address": "us1.socifiles.com",
+            "address": "uk-full.privateip.net",
             "port": 443,
             "users": [
               {
                 "encryption": "none",
-                "id": "c7b2afc0-9a35-11ef-b1ee-1239d0255272",
+                "id": "b6c96130-b47f-494a-8daa-f306a994dfc1",
                 "level": 8,
                 "security": "auto"
               }
@@ -1826,12 +1847,12 @@
           "tcpNoDelay": true
         },
         "tlsSettings": {
-          "allowInsecure": true,
+          "allowInsecure": false,
           "alpn": []
         },
         "wsSettings": {
           "headers": {},
-          "path": "/vlws"
+          "path": "/VLESS"
         }
       },
       "tag": "chain-22"
@@ -1852,22 +1873,23 @@
         "network": "ws",
         "security": "tls",
         "sockopt": {
-          "dialerProxy": "fragment"
+          "tcpKeepAliveIdle": 100,
+          "tcpNoDelay": true
         },
         "wsSettings": {
           "headers": {
             "Host": "bia-pain-bache-2r5.pages.dev"
           },
-          "path": "/trWeg6j9UqMsaE6VuO?ed=2560"
+          "path": "/trVa1ektLUnH4mesLO?ed=2560"
         },
         "tlsSettings": {
-          "allowInsecure": true,
+          "allowInsecure": false,
           "fingerprint": "randomized",
           "alpn": [
             "h2",
             "http/1.1"
           ],
-          "serverName": "BIa-pAIN-BachE-2R5.pagEs.dev"
+          "serverName": "bIA-paIN-baCHE-2r5.PaGES.dEV"
         }
       },
       "tag": "prox-22"
@@ -1883,12 +1905,12 @@
       "settings": {
         "vnext": [
           {
-            "address": "us1.socifiles.com",
+            "address": "uk-full.privateip.net",
             "port": 443,
             "users": [
               {
                 "encryption": "none",
-                "id": "c7b2afc0-9a35-11ef-b1ee-1239d0255272",
+                "id": "b6c96130-b47f-494a-8daa-f306a994dfc1",
                 "level": 8,
                 "security": "auto"
               }
@@ -1904,12 +1926,12 @@
           "tcpNoDelay": true
         },
         "tlsSettings": {
-          "allowInsecure": true,
+          "allowInsecure": false,
           "alpn": []
         },
         "wsSettings": {
           "headers": {},
-          "path": "/vlws"
+          "path": "/VLESS"
         }
       },
       "tag": "chain-23"
@@ -1930,22 +1952,23 @@
         "network": "ws",
         "security": "tls",
         "sockopt": {
-          "dialerProxy": "fragment"
+          "tcpKeepAliveIdle": 100,
+          "tcpNoDelay": true
         },
         "wsSettings": {
           "headers": {
             "Host": "bia-pain-bache-2r5.pages.dev"
           },
-          "path": "/trC4LXVaK40XU4mgw4?ed=2560"
+          "path": "/trDNShH0yLrPYmiQHC?ed=2560"
         },
         "tlsSettings": {
-          "allowInsecure": true,
+          "allowInsecure": false,
           "fingerprint": "randomized",
           "alpn": [
             "h2",
             "http/1.1"
           ],
-          "serverName": "bIa-Pain-bAChE-2R5.paGes.DeV"
+          "serverName": "BIA-PAin-bacHE-2r5.PagEs.deV"
         }
       },
       "tag": "prox-23"
@@ -1961,12 +1984,12 @@
       "settings": {
         "vnext": [
           {
-            "address": "us1.socifiles.com",
+            "address": "uk-full.privateip.net",
             "port": 443,
             "users": [
               {
                 "encryption": "none",
-                "id": "c7b2afc0-9a35-11ef-b1ee-1239d0255272",
+                "id": "b6c96130-b47f-494a-8daa-f306a994dfc1",
                 "level": 8,
                 "security": "auto"
               }
@@ -1982,12 +2005,12 @@
           "tcpNoDelay": true
         },
         "tlsSettings": {
-          "allowInsecure": true,
+          "allowInsecure": false,
           "alpn": []
         },
         "wsSettings": {
           "headers": {},
-          "path": "/vlws"
+          "path": "/VLESS"
         }
       },
       "tag": "chain-24"
@@ -2008,43 +2031,26 @@
         "network": "ws",
         "security": "tls",
         "sockopt": {
-          "dialerProxy": "fragment"
+          "tcpKeepAliveIdle": 100,
+          "tcpNoDelay": true
         },
         "wsSettings": {
           "headers": {
             "Host": "bia-pain-bache-2r5.pages.dev"
           },
-          "path": "/trCUIPFcfYBu6Hax7l?ed=2560"
+          "path": "/trv3OStyRtJStyQc06?ed=2560"
         },
         "tlsSettings": {
-          "allowInsecure": true,
+          "allowInsecure": false,
           "fingerprint": "randomized",
           "alpn": [
             "h2",
             "http/1.1"
           ],
-          "serverName": "bia-PAIN-bAcHe-2R5.PAGeS.DEV"
+          "serverName": "bia-paIN-BaCHE-2r5.PAgEs.dEV"
         }
       },
       "tag": "prox-24"
-    },
-    {
-      "tag": "fragment",
-      "protocol": "freedom",
-      "settings": {
-        "fragment": {
-          "packets": "tlshello",
-          "length": "10-20",
-          "interval": "10-10"
-        },
-        "domainStrategy": "UseIP"
-      },
-      "streamSettings": {
-        "sockopt": {
-          "tcpKeepAliveIdle": 100,
-          "tcpNoDelay": true
-        }
-      }
     },
     {
       "protocol": "dns",
