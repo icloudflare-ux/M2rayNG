@@ -1,0 +1,751 @@
+{
+  "remarks": "\uD83D\uDCA7 Fragment - Best Ping \uD83D\uDCA5",
+  "log": {
+    "loglevel": "warning"
+  },
+  "dns": {
+    "servers": [
+      "https://8.8.8.8/dns-query",
+      {
+        "address": "8.8.8.8",
+        "domains": [
+          "full:demius.pages.dev",
+          "full:www.speedtest.net"
+        ],
+        "skipFallback": true
+      },
+      {
+        "address": "8.8.8.8",
+        "domains": [
+          "geosite:category-ir"
+        ],
+        "expectIPs": [
+          "geoip:ir"
+        ],
+        "skipFallback": true
+      }
+    ],
+    "queryStrategy": "UseIP",
+    "tag": "dns"
+  },
+  "inbounds": [
+    {
+      "port": 10808,
+      "protocol": "socks",
+      "settings": {
+        "auth": "noauth",
+        "udp": true,
+        "userLevel": 8
+      },
+      "sniffing": {
+        "destOverride": [
+          "http",
+          "tls"
+        ],
+        "enabled": true,
+        "routeOnly": true
+      },
+      "tag": "socks-in"
+    },
+    {
+      "port": 10809,
+      "protocol": "http",
+      "settings": {
+        "auth": "noauth",
+        "udp": true,
+        "userLevel": 8
+      },
+      "sniffing": {
+        "destOverride": [
+          "http",
+          "tls"
+        ],
+        "enabled": true,
+        "routeOnly": true
+      },
+      "tag": "http-in"
+    },
+    {
+      "listen": "127.0.0.1",
+      "port": 10853,
+      "protocol": "dokodemo-door",
+      "settings": {
+        "address": "1.1.1.1",
+        "network": "tcp,udp",
+        "port": 53
+      },
+      "tag": "dns-in"
+    }
+  ],
+  "outbounds": [
+    {
+      "mux": {
+        "concurrency": 8,
+        "enabled": true,
+        "xudpConcurrency": 16,
+        "xudpProxyUDP443": "reject"
+      },
+      "protocol": "vless",
+      "settings": {
+        "vnext": [
+          {
+            "address": "vless-de01.gproxy.gratis",
+            "port": 443,
+            "users": [
+              {
+                "encryption": "none",
+                "id": "e1045679-29b5-442e-8a4f-7fb06ec48f78",
+                "level": 8,
+                "security": "auto"
+              }
+            ]
+          }
+        ]
+      },
+      "streamSettings": {
+        "network": "ws",
+        "security": "tls",
+        "sockopt": {
+          "dialerProxy": "prox-1",
+          "domainStrategy": "UseIPv4v6",
+          "tcpNoDelay": true
+        },
+        "tlsSettings": {
+          "allowInsecure": true,
+          "alpn": [],
+          "serverName": "vless-de01.gproxy.gratis"
+        },
+        "wsSettings": {
+          "headers": {
+            "Host": "vless-de01.gproxy.gratis"
+          },
+          "path": "/vless-ws"
+        }
+      },
+      "tag": "chain-1"
+    },
+    {
+      "protocol": "vless",
+      "settings": {
+        "vnext": [
+          {
+            "address": "demius.pages.dev",
+            "port": 443,
+            "users": [
+              {
+                "id": "489a1ab2-2019-4be5-8263-414caf540eaa",
+                "encryption": "none",
+                "level": 8
+              }
+            ]
+          }
+        ]
+      },
+      "streamSettings": {
+        "network": "ws",
+        "security": "tls",
+        "sockopt": {
+          "dialerProxy": "fragment"
+        },
+        "wsSettings": {
+          "headers": {
+            "Host": "demius.pages.dev",
+            "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/127.0.0.0 Safari/537.36"
+          },
+          "path": "/296knJzTGtHNY9kT?ed=2560"
+        },
+        "tlsSettings": {
+          "allowInsecure": true,
+          "fingerprint": "randomized",
+          "alpn": [
+            "h2",
+            "http/1.1"
+          ],
+          "serverName": "DEmiUs.PAGeS.DEV"
+        }
+      },
+      "tag": "prox-1"
+    },
+    {
+      "mux": {
+        "concurrency": 8,
+        "enabled": true,
+        "xudpConcurrency": 16,
+        "xudpProxyUDP443": "reject"
+      },
+      "protocol": "vless",
+      "settings": {
+        "vnext": [
+          {
+            "address": "vless-de01.gproxy.gratis",
+            "port": 443,
+            "users": [
+              {
+                "encryption": "none",
+                "id": "e1045679-29b5-442e-8a4f-7fb06ec48f78",
+                "level": 8,
+                "security": "auto"
+              }
+            ]
+          }
+        ]
+      },
+      "streamSettings": {
+        "network": "ws",
+        "security": "tls",
+        "sockopt": {
+          "dialerProxy": "prox-2",
+          "domainStrategy": "UseIPv4v6",
+          "tcpNoDelay": true
+        },
+        "tlsSettings": {
+          "allowInsecure": true,
+          "alpn": [],
+          "serverName": "vless-de01.gproxy.gratis"
+        },
+        "wsSettings": {
+          "headers": {
+            "Host": "vless-de01.gproxy.gratis"
+          },
+          "path": "/vless-ws"
+        }
+      },
+      "tag": "chain-2"
+    },
+    {
+      "protocol": "vless",
+      "settings": {
+        "vnext": [
+          {
+            "address": "www.speedtest.net",
+            "port": 443,
+            "users": [
+              {
+                "id": "489a1ab2-2019-4be5-8263-414caf540eaa",
+                "encryption": "none",
+                "level": 8
+              }
+            ]
+          }
+        ]
+      },
+      "streamSettings": {
+        "network": "ws",
+        "security": "tls",
+        "sockopt": {
+          "dialerProxy": "fragment"
+        },
+        "wsSettings": {
+          "headers": {
+            "Host": "demius.pages.dev",
+            "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/127.0.0.0 Safari/537.36"
+          },
+          "path": "/hSiE9ZN2bKdoO0pz?ed=2560"
+        },
+        "tlsSettings": {
+          "allowInsecure": true,
+          "fingerprint": "randomized",
+          "alpn": [
+            "h2",
+            "http/1.1"
+          ],
+          "serverName": "DEMIUS.pAgEs.dev"
+        }
+      },
+      "tag": "prox-2"
+    },
+    {
+      "mux": {
+        "concurrency": 8,
+        "enabled": true,
+        "xudpConcurrency": 16,
+        "xudpProxyUDP443": "reject"
+      },
+      "protocol": "vless",
+      "settings": {
+        "vnext": [
+          {
+            "address": "vless-de01.gproxy.gratis",
+            "port": 443,
+            "users": [
+              {
+                "encryption": "none",
+                "id": "e1045679-29b5-442e-8a4f-7fb06ec48f78",
+                "level": 8,
+                "security": "auto"
+              }
+            ]
+          }
+        ]
+      },
+      "streamSettings": {
+        "network": "ws",
+        "security": "tls",
+        "sockopt": {
+          "dialerProxy": "prox-3",
+          "domainStrategy": "UseIPv4v6",
+          "tcpNoDelay": true
+        },
+        "tlsSettings": {
+          "allowInsecure": true,
+          "alpn": [],
+          "serverName": "vless-de01.gproxy.gratis"
+        },
+        "wsSettings": {
+          "headers": {
+            "Host": "vless-de01.gproxy.gratis"
+          },
+          "path": "/vless-ws"
+        }
+      },
+      "tag": "chain-3"
+    },
+    {
+      "protocol": "vless",
+      "settings": {
+        "vnext": [
+          {
+            "address": "172.66.47.150",
+            "port": 443,
+            "users": [
+              {
+                "id": "489a1ab2-2019-4be5-8263-414caf540eaa",
+                "encryption": "none",
+                "level": 8
+              }
+            ]
+          }
+        ]
+      },
+      "streamSettings": {
+        "network": "ws",
+        "security": "tls",
+        "sockopt": {
+          "dialerProxy": "fragment"
+        },
+        "wsSettings": {
+          "headers": {
+            "Host": "demius.pages.dev",
+            "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/127.0.0.0 Safari/537.36"
+          },
+          "path": "/AEaTkqpwHMsgeQVq?ed=2560"
+        },
+        "tlsSettings": {
+          "allowInsecure": true,
+          "fingerprint": "randomized",
+          "alpn": [
+            "h2",
+            "http/1.1"
+          ],
+          "serverName": "demIUs.pages.deV"
+        }
+      },
+      "tag": "prox-3"
+    },
+    {
+      "mux": {
+        "concurrency": 8,
+        "enabled": true,
+        "xudpConcurrency": 16,
+        "xudpProxyUDP443": "reject"
+      },
+      "protocol": "vless",
+      "settings": {
+        "vnext": [
+          {
+            "address": "vless-de01.gproxy.gratis",
+            "port": 443,
+            "users": [
+              {
+                "encryption": "none",
+                "id": "e1045679-29b5-442e-8a4f-7fb06ec48f78",
+                "level": 8,
+                "security": "auto"
+              }
+            ]
+          }
+        ]
+      },
+      "streamSettings": {
+        "network": "ws",
+        "security": "tls",
+        "sockopt": {
+          "dialerProxy": "prox-4",
+          "domainStrategy": "UseIPv4v6",
+          "tcpNoDelay": true
+        },
+        "tlsSettings": {
+          "allowInsecure": true,
+          "alpn": [],
+          "serverName": "vless-de01.gproxy.gratis"
+        },
+        "wsSettings": {
+          "headers": {
+            "Host": "vless-de01.gproxy.gratis"
+          },
+          "path": "/vless-ws"
+        }
+      },
+      "tag": "chain-4"
+    },
+    {
+      "protocol": "vless",
+      "settings": {
+        "vnext": [
+          {
+            "address": "172.66.44.106",
+            "port": 443,
+            "users": [
+              {
+                "id": "489a1ab2-2019-4be5-8263-414caf540eaa",
+                "encryption": "none",
+                "level": 8
+              }
+            ]
+          }
+        ]
+      },
+      "streamSettings": {
+        "network": "ws",
+        "security": "tls",
+        "sockopt": {
+          "dialerProxy": "fragment"
+        },
+        "wsSettings": {
+          "headers": {
+            "Host": "demius.pages.dev",
+            "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/127.0.0.0 Safari/537.36"
+          },
+          "path": "/jeflbHdmFujFEw7A?ed=2560"
+        },
+        "tlsSettings": {
+          "allowInsecure": true,
+          "fingerprint": "randomized",
+          "alpn": [
+            "h2",
+            "http/1.1"
+          ],
+          "serverName": "deMIUS.pAGes.DeV"
+        }
+      },
+      "tag": "prox-4"
+    },
+    {
+      "mux": {
+        "concurrency": 8,
+        "enabled": true,
+        "xudpConcurrency": 16,
+        "xudpProxyUDP443": "reject"
+      },
+      "protocol": "vless",
+      "settings": {
+        "vnext": [
+          {
+            "address": "vless-de01.gproxy.gratis",
+            "port": 443,
+            "users": [
+              {
+                "encryption": "none",
+                "id": "e1045679-29b5-442e-8a4f-7fb06ec48f78",
+                "level": 8,
+                "security": "auto"
+              }
+            ]
+          }
+        ]
+      },
+      "streamSettings": {
+        "network": "ws",
+        "security": "tls",
+        "sockopt": {
+          "dialerProxy": "prox-5",
+          "domainStrategy": "UseIPv4v6",
+          "tcpNoDelay": true
+        },
+        "tlsSettings": {
+          "allowInsecure": true,
+          "alpn": [],
+          "serverName": "vless-de01.gproxy.gratis"
+        },
+        "wsSettings": {
+          "headers": {
+            "Host": "vless-de01.gproxy.gratis"
+          },
+          "path": "/vless-ws"
+        }
+      },
+      "tag": "chain-5"
+    },
+    {
+      "protocol": "vless",
+      "settings": {
+        "vnext": [
+          {
+            "address": "[2606:4700:310c::ac42:2f96]",
+            "port": 443,
+            "users": [
+              {
+                "id": "489a1ab2-2019-4be5-8263-414caf540eaa",
+                "encryption": "none",
+                "level": 8
+              }
+            ]
+          }
+        ]
+      },
+      "streamSettings": {
+        "network": "ws",
+        "security": "tls",
+        "sockopt": {
+          "dialerProxy": "fragment"
+        },
+        "wsSettings": {
+          "headers": {
+            "Host": "demius.pages.dev",
+            "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/127.0.0.0 Safari/537.36"
+          },
+          "path": "/iQhygb3Rfec65N2c?ed=2560"
+        },
+        "tlsSettings": {
+          "allowInsecure": true,
+          "fingerprint": "randomized",
+          "alpn": [
+            "h2",
+            "http/1.1"
+          ],
+          "serverName": "dEmIuS.pagES.dev"
+        }
+      },
+      "tag": "prox-5"
+    },
+    {
+      "mux": {
+        "concurrency": 8,
+        "enabled": true,
+        "xudpConcurrency": 16,
+        "xudpProxyUDP443": "reject"
+      },
+      "protocol": "vless",
+      "settings": {
+        "vnext": [
+          {
+            "address": "vless-de01.gproxy.gratis",
+            "port": 443,
+            "users": [
+              {
+                "encryption": "none",
+                "id": "e1045679-29b5-442e-8a4f-7fb06ec48f78",
+                "level": 8,
+                "security": "auto"
+              }
+            ]
+          }
+        ]
+      },
+      "streamSettings": {
+        "network": "ws",
+        "security": "tls",
+        "sockopt": {
+          "dialerProxy": "prox-6",
+          "domainStrategy": "UseIPv4v6",
+          "tcpNoDelay": true
+        },
+        "tlsSettings": {
+          "allowInsecure": true,
+          "alpn": [],
+          "serverName": "vless-de01.gproxy.gratis"
+        },
+        "wsSettings": {
+          "headers": {
+            "Host": "vless-de01.gproxy.gratis"
+          },
+          "path": "/vless-ws"
+        }
+      },
+      "tag": "chain-6"
+    },
+    {
+      "protocol": "vless",
+      "settings": {
+        "vnext": [
+          {
+            "address": "[2606:4700:310c::ac42:2c6a]",
+            "port": 443,
+            "users": [
+              {
+                "id": "489a1ab2-2019-4be5-8263-414caf540eaa",
+                "encryption": "none",
+                "level": 8
+              }
+            ]
+          }
+        ]
+      },
+      "streamSettings": {
+        "network": "ws",
+        "security": "tls",
+        "sockopt": {
+          "dialerProxy": "fragment"
+        },
+        "wsSettings": {
+          "headers": {
+            "Host": "demius.pages.dev",
+            "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/127.0.0.0 Safari/537.36"
+          },
+          "path": "/TFSeyUvpB0o2Z8Mo?ed=2560"
+        },
+        "tlsSettings": {
+          "allowInsecure": true,
+          "fingerprint": "randomized",
+          "alpn": [
+            "h2",
+            "http/1.1"
+          ],
+          "serverName": "DEMiuS.PAGes.dev"
+        }
+      },
+      "tag": "prox-6"
+    },
+    {
+      "tag": "fragment",
+      "protocol": "freedom",
+      "settings": {
+        "fragment": {
+          "packets": "tlshello",
+          "length": "10-20",
+          "interval": "10-20"
+        },
+        "domainStrategy": "UseIPv4v6"
+      },
+      "streamSettings": {
+        "sockopt": {
+          "tcpKeepAliveIdle": 30,
+          "tcpNoDelay": true
+        }
+      }
+    },
+    {
+      "protocol": "dns",
+      "tag": "dns-out"
+    },
+    {
+      "protocol": "freedom",
+      "settings": {},
+      "tag": "direct"
+    },
+    {
+      "protocol": "blackhole",
+      "settings": {
+        "response": {
+          "type": "http"
+        }
+      },
+      "tag": "block"
+    }
+  ],
+  "policy": {
+    "levels": {
+      "8": {
+        "connIdle": 300,
+        "downlinkOnly": 1,
+        "handshake": 4,
+        "uplinkOnly": 1
+      }
+    },
+    "system": {
+      "statsOutboundUplink": true,
+      "statsOutboundDownlink": true
+    }
+  },
+  "routing": {
+    "domainStrategy": "IPIfNonMatch",
+    "rules": [
+      {
+        "inboundTag": [
+          "dns-in"
+        ],
+        "outboundTag": "dns-out",
+        "type": "field"
+      },
+      {
+        "inboundTag": [
+          "socks-in",
+          "http-in"
+        ],
+        "port": "53",
+        "outboundTag": "dns-out",
+        "type": "field"
+      },
+      {
+        "ip": [
+          "8.8.8.8"
+        ],
+        "port": "53",
+        "network": "udp",
+        "outboundTag": "direct",
+        "type": "field"
+      },
+      {
+        "domain": [
+          "geosite:private",
+          "geosite:category-ir"
+        ],
+        "outboundTag": "direct",
+        "type": "field"
+      },
+      {
+        "ip": [
+          "geoip:private",
+          "geoip:ir"
+        ],
+        "outboundTag": "direct",
+        "type": "field"
+      },
+      {
+        "ip": [
+          "8.8.8.8"
+        ],
+        "network": "tcp",
+        "balancerTag": "all-proxy",
+        "type": "field"
+      },
+      {
+        "network": "tcp,udp",
+        "balancerTag": "all",
+        "type": "field"
+      }
+    ],
+    "balancers": [
+      {
+        "tag": "all-proxy",
+        "selector": [
+          "prox"
+        ],
+        "strategy": {
+          "type": "leastPing"
+        },
+        "fallbackTag": "prox-2"
+      },
+      {
+        "tag": "all",
+        "selector": [
+          "chain"
+        ],
+        "strategy": {
+          "type": "leastPing"
+        },
+        "fallbackTag": "chain-2"
+      }
+    ]
+  },
+  "observatory": {
+    "probeInterval": "30s",
+    "probeURL": "https://www.gstatic.com/generate_204",
+    "subjectSelector": [
+      "prox",
+      "chain"
+    ],
+    "EnableConcurrency": true
+  },
+  "stats": {}
+}
