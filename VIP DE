@@ -89,12 +89,12 @@
       "settings": {
         "vnext": [
           {
-            "address": "vless-de01.gproxy.gratis",
+            "address": "vless-us01.gproxy.gratis",
             "port": 443,
             "users": [
               {
                 "encryption": "none",
-                "id": "e1045679-29b5-442e-8a4f-7fb06ec48f78",
+                "id": "eb376be7-93c2-4985-a7b4-8b0e360a79df",
                 "level": 8,
                 "security": "auto"
               }
@@ -113,11 +113,11 @@
         "tlsSettings": {
           "allowInsecure": true,
           "alpn": [],
-          "serverName": "vless-de01.gproxy.gratis"
+          "serverName": "vless-us01.gproxy.gratis"
         },
         "wsSettings": {
           "headers": {
-            "Host": "vless-de01.gproxy.gratis"
+            "Host": "vless-us01.gproxy.gratis"
           },
           "path": "/vless-ws"
         }
@@ -177,12 +177,12 @@
       "settings": {
         "vnext": [
           {
-            "address": "vless-de01.gproxy.gratis",
+            "address": "vless-us01.gproxy.gratis",
             "port": 443,
             "users": [
               {
                 "encryption": "none",
-                "id": "e1045679-29b5-442e-8a4f-7fb06ec48f78",
+                "id": "eb376be7-93c2-4985-a7b4-8b0e360a79df",
                 "level": 8,
                 "security": "auto"
               }
@@ -201,11 +201,11 @@
         "tlsSettings": {
           "allowInsecure": true,
           "alpn": [],
-          "serverName": "vless-de01.gproxy.gratis"
+          "serverName": "vless-us01.gproxy.gratis"
         },
         "wsSettings": {
           "headers": {
-            "Host": "vless-de01.gproxy.gratis"
+            "Host": "vless-us01.gproxy.gratis"
           },
           "path": "/vless-ws"
         }
@@ -265,12 +265,12 @@
       "settings": {
         "vnext": [
           {
-            "address": "vless-de01.gproxy.gratis",
+            "address": "vless-us01.gproxy.gratis",
             "port": 443,
             "users": [
               {
                 "encryption": "none",
-                "id": "e1045679-29b5-442e-8a4f-7fb06ec48f78",
+                "id": "eb376be7-93c2-4985-a7b4-8b0e360a79df",
                 "level": 8,
                 "security": "auto"
               }
@@ -289,11 +289,11 @@
         "tlsSettings": {
           "allowInsecure": true,
           "alpn": [],
-          "serverName": "vless-de01.gproxy.gratis"
+          "serverName": "vless-us01.gproxy.gratis"
         },
         "wsSettings": {
           "headers": {
-            "Host": "vless-de01.gproxy.gratis"
+            "Host": "vless-us01.gproxy.gratis"
           },
           "path": "/vless-ws"
         }
@@ -353,12 +353,12 @@
       "settings": {
         "vnext": [
           {
-            "address": "vless-de01.gproxy.gratis",
+            "address": "vless-us01.gproxy.gratis",
             "port": 443,
             "users": [
               {
                 "encryption": "none",
-                "id": "e1045679-29b5-442e-8a4f-7fb06ec48f78",
+                "id": "eb376be7-93c2-4985-a7b4-8b0e360a79df",
                 "level": 8,
                 "security": "auto"
               }
@@ -377,11 +377,11 @@
         "tlsSettings": {
           "allowInsecure": true,
           "alpn": [],
-          "serverName": "vless-de01.gproxy.gratis"
+          "serverName": "vless-us01.gproxy.gratis"
         },
         "wsSettings": {
           "headers": {
-            "Host": "vless-de01.gproxy.gratis"
+            "Host": "vless-us01.gproxy.gratis"
           },
           "path": "/vless-ws"
         }
@@ -441,12 +441,12 @@
       "settings": {
         "vnext": [
           {
-            "address": "vless-de01.gproxy.gratis",
+            "address": "vless-us01.gproxy.gratis",
             "port": 443,
             "users": [
               {
                 "encryption": "none",
-                "id": "e1045679-29b5-442e-8a4f-7fb06ec48f78",
+                "id": "eb376be7-93c2-4985-a7b4-8b0e360a79df",
                 "level": 8,
                 "security": "auto"
               }
@@ -465,11 +465,11 @@
         "tlsSettings": {
           "allowInsecure": true,
           "alpn": [],
-          "serverName": "vless-de01.gproxy.gratis"
+          "serverName": "vless-us01.gproxy.gratis"
         },
         "wsSettings": {
           "headers": {
-            "Host": "vless-de01.gproxy.gratis"
+            "Host": "vless-us01.gproxy.gratis"
           },
           "path": "/vless-ws"
         }
@@ -529,12 +529,12 @@
       "settings": {
         "vnext": [
           {
-            "address": "vless-de01.gproxy.gratis",
+            "address": "vless-us01.gproxy.gratis",
             "port": 443,
             "users": [
               {
                 "encryption": "none",
-                "id": "e1045679-29b5-442e-8a4f-7fb06ec48f78",
+                "id": "eb376be7-93c2-4985-a7b4-8b0e360a79df",
                 "level": 8,
                 "security": "auto"
               }
@@ -553,11 +553,11 @@
         "tlsSettings": {
           "allowInsecure": true,
           "alpn": [],
-          "serverName": "vless-de01.gproxy.gratis"
+          "serverName": "vless-us01.gproxy.gratis"
         },
         "wsSettings": {
           "headers": {
-            "Host": "vless-de01.gproxy.gratis"
+            "Host": "vless-us01.gproxy.gratis"
           },
           "path": "/vless-ws"
         }
